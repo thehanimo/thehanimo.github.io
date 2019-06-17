@@ -1,15 +1,22 @@
 import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
+import { BrowserRouter, Route } from "react-router-dom";
+import { ParallaxProvider } from "react-scroll-parallax";
+
+import * as routes from "./constants/routes";
+
+import Home from "./components/Home/Home";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Under Construction...</p>
-      </header>
-    </div>
+    <ParallaxProvider>
+      <div className="App">
+        <BrowserRouter>
+          <div>
+            <Route exact path={routes.Home} component={Home} />
+          </div>
+        </BrowserRouter>
+      </div>
+    </ParallaxProvider>
   );
 }
 
