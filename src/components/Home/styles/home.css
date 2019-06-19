@@ -131,6 +131,7 @@
 .page-sub-header-2 {
   font-size: 20px;
   letter-spacing: 10px;
+  margin-bottom: 30px;
 }
 .comp4 {
   margin-left: 50px;
@@ -143,8 +144,15 @@
   flex-direction: row;
   overflow: scroll;
   -webkit-overflow-scrolling: touch;
-  padding-right: 70px;
-  padding-left: 70px;
+}
+.pad-right {
+  padding-right: 150px;
+}
+.pad-left {
+  padding-left: 150px;
+}
+.margin-bot {
+  margin-bottom: 100px;
 }
 ::-webkit-scrollbar {
   width: 0px; /* Remove scrollbar space */
@@ -154,15 +162,19 @@
   margin: 0;
 }
 .people-card {
-  margin: 30px;
+  margin: 5px 10px 5px 10px;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
   width: 250px;
   padding: 30px;
   border-radius: 30px;
   transition: transform 0.3s, box-shadow 0.3s;
 }
+.people-card-container a {
+  color: black;
+  text-decoration: none;
+}
 .people-card:hover {
-  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
   transform: translateY(-5px);
 }
 .people-card > .name {

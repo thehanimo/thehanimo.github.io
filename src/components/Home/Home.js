@@ -92,51 +92,57 @@ export default class Home extends Component {
           <div className="page-sub-header-container">
             <div className="comp-container">
               <Zoom delay={300} when={this.state.companiesTrigger}>
-                <div className="comp1">
-                  <Parallax
-                    className="custom-class"
-                    y={[10, -30]}
-                    tagOuter="figure"
-                  >
-                    <img
-                      src={antzknowLogo}
-                      alt="Antzknow-Logo"
-                      className="comp-img"
-                    />
-                  </Parallax>
-                </div>
+                <a href="http://antzknow.com" target="_blank">
+                  <div className="comp1">
+                    <Parallax
+                      className="custom-class"
+                      y={[10, -30]}
+                      tagOuter="figure"
+                    >
+                      <img
+                        src={antzknowLogo}
+                        alt="Antzknow-Logo"
+                        className="comp-img"
+                      />
+                    </Parallax>
+                  </div>
+                </a>
               </Zoom>
               <Zoom delay={600} when={this.state.companiesTrigger}>
-                <div className="comp2">
-                  <Parallax
-                    className="custom-class"
-                    y={[10, -30]}
-                    tagOuter="figure"
-                  >
-                    <img
-                      src={frendshareLogo}
-                      alt="Frendshare-Logo"
-                      className="comp-img"
-                    />
-                  </Parallax>
-                </div>
+                <a href="http://frendshare.com" target="_blank">
+                  <div className="comp2">
+                    <Parallax
+                      className="custom-class"
+                      y={[10, -30]}
+                      tagOuter="figure"
+                    >
+                      <img
+                        src={frendshareLogo}
+                        alt="Frendshare-Logo"
+                        className="comp-img"
+                      />
+                    </Parallax>
+                  </div>
+                </a>
               </Zoom>
             </div>
             <div className="comp-container">
               <Zoom delay={1000} when={this.state.companiesTrigger}>
-                <div className="comp3">
-                  <Parallax
-                    className="custom-class"
-                    y={[10, -30]}
-                    tagOuter="figure"
-                  >
-                    <img
-                      src={pushstartLogo}
-                      alt="Pushstart-Logo"
-                      className="comp-img"
-                    />
-                  </Parallax>
-                </div>
+                <a href="http://pushstart.in" target="_blank">
+                  <div className="comp3">
+                    <Parallax
+                      className="custom-class"
+                      y={[10, -30]}
+                      tagOuter="figure"
+                    >
+                      <img
+                        src={pushstartLogo}
+                        alt="Pushstart-Logo"
+                        className="comp-img"
+                      />
+                    </Parallax>
+                  </div>
+                </a>
               </Zoom>
               <div>
                 <Flip left cascade>
@@ -154,36 +160,40 @@ export default class Home extends Component {
                 </Fade>
               </div>
               <Zoom delay={800} when={this.state.companiesTrigger}>
-                <div className="comp4">
-                  <Parallax
-                    className="custom-class"
-                    y={[10, -30]}
-                    tagOuter="figure"
-                  >
-                    <img
-                      src={trippinessLogo}
-                      alt="Trippiness-Logo"
-                      className="comp-img"
-                    />
-                  </Parallax>
-                </div>
+                <a href="http://trippiness.com" target="_blank">
+                  <div className="comp4">
+                    <Parallax
+                      className="custom-class"
+                      y={[10, -30]}
+                      tagOuter="figure"
+                    >
+                      <img
+                        src={trippinessLogo}
+                        alt="Trippiness-Logo"
+                        className="comp-img"
+                      />
+                    </Parallax>
+                  </div>
+                </a>
               </Zoom>
             </div>
             <div className="comp-container">
               <Zoom delay={450} when={this.state.companiesTrigger}>
-                <div className="comp5">
-                  <Parallax
-                    className="custom-class"
-                    y={[10, -30]}
-                    tagOuter="figure"
-                  >
-                    <img
-                      src={futureSchoolLogo}
-                      alt="FutureSchool-Logo"
-                      className="comp-img"
-                    />
-                  </Parallax>
-                </div>
+                <a href="http://www.thefuture.school" target="_blank">
+                  <div className="comp5">
+                    <Parallax
+                      className="custom-class"
+                      y={[10, -30]}
+                      tagOuter="figure"
+                    >
+                      <img
+                        src={futureSchoolLogo}
+                        alt="FutureSchool-Logo"
+                        className="comp-img"
+                      />
+                    </Parallax>
+                  </div>
+                </a>
               </Zoom>
             </div>
           </div>
@@ -200,19 +210,24 @@ export default class Home extends Component {
             </Fade>
           </div>
 
-          <div className="people-card-container" style={{ paddingLeft: 150 }}>
+          <div className="people-card-container pad-left">
             <Parallax
               className="custom-class-people"
               x={[50, -50]}
               tagOuter="figure"
             >
-              <div className="people-card">
-                <img src={Tristan} />
-                <div className="name">
-                  <span style={{ fontWeight: "bold" }}>Tristan</span>Liu
+              <a
+                href="https://www.linkedin.com/in/tristanliuyiwen/"
+                target="_blank"
+              >
+                <div className="people-card">
+                  <img src={Tristan} />
+                  <div className="name">
+                    <span style={{ fontWeight: "bold" }}>Tristan</span>Liu
+                  </div>
+                  <div className="desig">CEO, Antzknow</div>
                 </div>
-                <div className="desig">CEO, Antzknow</div>
-              </div>
+              </a>
             </Parallax>
 
             <Parallax
@@ -220,45 +235,53 @@ export default class Home extends Component {
               x={[50, -50]}
               tagOuter="figure"
             >
-              <div className="people-card">
-                <img src={Akkshay} />
-                <div className="name">
-                  <span style={{ fontWeight: "bold" }}>Akkshay</span>Khoslaa
+              <a href="https://akkshay.github.io" target="_blank">
+                <div className="people-card">
+                  <img src={Akkshay} />
+                  <div className="name">
+                    <span style={{ fontWeight: "bold" }}>Akkshay</span>Khoslaa
+                  </div>
+                  <div className="desig">Founder, The Future School</div>
                 </div>
-                <div className="desig">Founder, The Future School</div>
-              </div>
+              </a>
             </Parallax>
             <Parallax
               className="custom-class-people"
               x={[50, -50]}
               tagOuter="figure"
             >
-              <div className="people-card">
-                <img src={Neeraj} />
-                <div className="name">
-                  <span style={{ fontWeight: "bold" }}>Neeraj</span>Joshi
+              <a
+                href="https://www.linkedin.com/in/jneeraj0807/"
+                target="_blank"
+              >
+                <div className="people-card">
+                  <img src={Neeraj} />
+                  <div className="name">
+                    <span style={{ fontWeight: "bold" }}>Neeraj</span>Joshi
+                  </div>
+                  <div className="desig">Founder, Pushstart</div>
                 </div>
-                <div className="desig">Founder, Pushstart</div>
-              </div>
+              </a>
             </Parallax>
           </div>
           <div
-            className="people-card-container"
+            className="people-card-container pad-right margin-bot"
             id="scrollRight"
-            style={{ paddingLeft: 150 }}
           >
             <Parallax
               className="custom-class-people"
               x={[-50, 50]}
               tagOuter="figure"
             >
-              <div className="people-card">
-                <img src={Sudhansu} />
-                <div className="name">
-                  <span style={{ fontWeight: "bold" }}>Sudhansu</span>Swain
+              <a href="http://www.skswain.com" target="_blank">
+                <div className="people-card">
+                  <img src={Sudhansu} />
+                  <div className="name">
+                    <span style={{ fontWeight: "bold" }}>Sudhansu</span>Swain
+                  </div>
+                  <div className="desig">Tech Lead, Pushstart</div>
                 </div>
-                <div className="desig">Tech Lead, Pushstart</div>
-              </div>
+              </a>
             </Parallax>
 
             <Parallax
@@ -266,26 +289,37 @@ export default class Home extends Component {
               x={[-50, 50]}
               tagOuter="figure"
             >
-              <div className="people-card">
-                <img src={Chris} />
-                <div className="name">
-                  <span style={{ fontWeight: "bold" }}>Christopher</span>Gaskill
+              <a
+                href="https://www.linkedin.com/in/christophergaskill/"
+                target="_blank"
+              >
+                <div className="people-card">
+                  <img src={Chris} />
+                  <div className="name">
+                    <span style={{ fontWeight: "bold" }}>Christopher</span>
+                    Gaskill
+                  </div>
+                  <div className="desig">Founder, Frendshare</div>
                 </div>
-                <div className="desig">Founder, Frendshare</div>
-              </div>
+              </a>
             </Parallax>
             <Parallax
               className="custom-class-people"
               x={[-50, 50]}
               tagOuter="figure"
             >
-              <div className="people-card">
-                <img src={Prakhar} />
-                <div className="name">
-                  <span style={{ fontWeight: "bold" }}>Prakhar</span>Shivam
+              <a
+                href="https://www.linkedin.com/in/prakharshivam/?originalSubdomain=in"
+                target="_blank"
+              >
+                <div className="people-card">
+                  <img src={Prakhar} />
+                  <div className="name">
+                    <span style={{ fontWeight: "bold" }}>Prakhar</span>Shivam
+                  </div>
+                  <div className="desig">Founder, Nodestory</div>
                 </div>
-                <div className="desig">Founder, Nodestory</div>
-              </div>
+              </a>
             </Parallax>
           </div>
         </div>
