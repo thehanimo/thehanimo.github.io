@@ -1,16 +1,29 @@
 {
   "files": {
-    "main.css": "/static/css/main.2cce8147.chunk.css",
-    "main.js": "/static/js/main.c4870739.chunk.js",
-    "main.js.map": "/static/js/main.c4870739.chunk.js.map",
+    "main.css": "/static/css/main.a02a339e.chunk.css",
+    "main.js": "/static/js/main.7e97fe1d.chunk.js",
+    "main.js.map": "/static/js/main.7e97fe1d.chunk.js.map",
     "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
     "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
-    "static/js/2.b41502e9.chunk.js": "/static/js/2.b41502e9.chunk.js",
-    "static/js/2.b41502e9.chunk.js.map": "/static/js/2.b41502e9.chunk.js.map",
+    "static/js/2.aa032ab4.chunk.js": "/static/js/2.aa032ab4.chunk.js",
+    "static/js/2.aa032ab4.chunk.js.map": "/static/js/2.aa032ab4.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.b5c7fb27b9fe012fc88b3fa2a022b5a1.js": "/precache-manifest.b5c7fb27b9fe012fc88b3fa2a022b5a1.js",
+    "precache-manifest.b097856fd52d1a49f11a3eb61e22a285.js": "/precache-manifest.b097856fd52d1a49f11a3eb61e22a285.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.2cce8147.chunk.css.map": "/static/css/main.2cce8147.chunk.css.map",
-    "static/media/logo.svg": "/static/media/logo.5d5d9eef.svg"
+    "static/css/main.a02a339e.chunk.css.map": "/static/css/main.a02a339e.chunk.css.map",
+    "static/media/Akkshay.jpg": "/static/media/Akkshay.ed9adbec.jpg",
+    "static/media/Chris.png": "/static/media/Chris.d611d811.png",
+    "static/media/Neeraj.png": "/static/media/Neeraj.90bae305.png",
+    "static/media/Prakhar.png": "/static/media/Prakhar.a5a6d8fb.png",
+    "static/media/Sudhansu.png": "/static/media/Sudhansu.fd01c679.png",
+    "static/media/Tristan.jpg": "/static/media/Tristan.b9c91496.jpg",
+    "static/media/antzknow-logo.png": "/static/media/antzknow-logo.6e85037b.png",
+    "static/media/frendshare-logo.png": "/static/media/frendshare-logo.6a7018b9.png",
+    "static/media/futureSchool-logo.png": "/static/media/futureSchool-logo.d8363ab9.png",
+    "static/media/hani.jpg": "/static/media/hani.9c944b38.jpg",
+    "static/media/nodestory.png": "/static/media/nodestory.73a3038a.png",
+    "static/media/pushstart-logo.png": "/static/media/pushstart-logo.7ecf92fc.png",
+    "static/media/pushstart.png": "/static/media/pushstart.dd2bd718.png",
+    "static/media/trippiness-logo.png": "/static/media/trippiness-logo.824acd88.png"
   }
 }
