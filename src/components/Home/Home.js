@@ -15,6 +15,13 @@ import pushstartLogo from "./img/pushstart-logo.png";
 import trippinessLogo from "./img/trippiness-logo.png";
 import futureSchoolLogo from "./img/futureSchool-logo.png";
 
+import Akkshay from "./img/Akkshay.jpg";
+import Chris from "./img/Chris.png";
+import Neeraj from "./img/Neeraj.png";
+import Prakhar from "./img/Prakhar.png";
+import Sudhansu from "./img/Sudhansu.png";
+import Tristan from "./img/Tristan.jpg";
+
 export default class Home extends Component {
   constructor(props) {
     super(props);
@@ -22,25 +29,37 @@ export default class Home extends Component {
       companiesTrigger: false
     };
   }
+  componentDidMount = () => {
+    document.getElementById("scrollRight").scrollLeft = 10000;
+  };
   render() {
     return (
       <React.Fragment>
         <div className="main-banner">
-          <Parallax className="custom-class" y={[20, -20]} tagOuter="figure">
+          <Parallax
+            className="custom-class-people"
+            y={[20, -20]}
+            tagOuter="figure"
+          >
             <div className="avatar-container">
               <img src={hani} alt="Hani Mohammed" className="avatar" />
             </div>
           </Parallax>
           <div className="title-container">
-            <span className="title">
+            <div className="title">
               <Fade left cascade>
-                Hani Mohammed.
+                <div>Hani</div>
+                <div className="mohammed">Mohammed.</div>
               </Fade>
-            </span>
+            </div>
           </div>
 
           <div className="sub-title-container">
-            <Parallax className="custom-class" y={[50, -50]} tagOuter="figure">
+            <Parallax
+              className="custom-class-people"
+              y={[50, -50]}
+              tagOuter="figure"
+            >
               <span className="sub-title">
                 <Fade top cascade delay={800}>
                   Developer and Graphic Designer
@@ -169,10 +188,8 @@ export default class Home extends Component {
             </div>
           </div>
         </div>
-        <div
-          className="page-sub-header-container"
-          style={{ paddingBottom: 1000 }}
-        >
+
+        <div className="page-sub-header-container">
           <div className="page-sub-header">
             <Flip left cascade>
               <span>Fabulous </span>
@@ -183,65 +200,103 @@ export default class Home extends Component {
             </Fade>
           </div>
 
-          <div className="people-card-container">
-            <Parallax className="custom-class" x={[50, -50]} tagOuter="figure">
-              <div className="people-card start">
-                <img src={hani} />
+          <div className="people-card-container" style={{ paddingLeft: 150 }}>
+            <Parallax
+              className="custom-class-people"
+              x={[50, -50]}
+              tagOuter="figure"
+            >
+              <div className="people-card">
+                <img src={Tristan} />
                 <div className="name">
-                  <span style={{ fontWeight: "bold" }}>Hani</span>Mohammed1
+                  <span style={{ fontWeight: "bold" }}>Tristan</span>Liu
                 </div>
-                <div className="desig">Founder, Pushstart</div>
+                <div className="desig">CEO, Antzknow</div>
               </div>
             </Parallax>
 
-            <Parallax className="custom-class" x={[50, -50]} tagOuter="figure">
-              <div className="people-card end">
-                <img src={hani} />
+            <Parallax
+              className="custom-class-people"
+              x={[50, -50]}
+              tagOuter="figure"
+            >
+              <div className="people-card">
+                <img src={Akkshay} />
                 <div className="name">
-                  <span style={{ fontWeight: "bold" }}>Hani</span>Mohammed
+                  <span style={{ fontWeight: "bold" }}>Akkshay</span>Khoslaa
                 </div>
-                <div className="desig">Founder, Pushstart</div>
+                <div className="desig">Founder, The Future School</div>
               </div>
             </Parallax>
-            <Parallax className="custom-class" x={[50, -50]} tagOuter="figure">
-              <div className="people-card start">
-                <img src={hani} />
+            <Parallax
+              className="custom-class-people"
+              x={[50, -50]}
+              tagOuter="figure"
+            >
+              <div className="people-card">
+                <img src={Neeraj} />
                 <div className="name">
-                  <span style={{ fontWeight: "bold" }}>Hani</span>Mohammed
+                  <span style={{ fontWeight: "bold" }}>Neeraj</span>Joshi
                 </div>
                 <div className="desig">Founder, Pushstart</div>
               </div>
             </Parallax>
           </div>
-          <div className="people-card-container">
-            <Parallax className="custom-class" x={[-50, 50]} tagOuter="figure">
-              <div className="people-card start">
-                <img src={hani} />
+          <div
+            className="people-card-container"
+            id="scrollRight"
+            style={{ paddingLeft: 150 }}
+          >
+            <Parallax
+              className="custom-class-people"
+              x={[-50, 50]}
+              tagOuter="figure"
+            >
+              <div className="people-card">
+                <img src={Sudhansu} />
                 <div className="name">
-                  <span style={{ fontWeight: "bold" }}>Hani</span>Mohammed1
+                  <span style={{ fontWeight: "bold" }}>Sudhansu</span>Swain
                 </div>
-                <div className="desig">Founder, Pushstart</div>
+                <div className="desig">Tech Lead, Pushstart</div>
               </div>
             </Parallax>
 
-            <Parallax className="custom-class" x={[-50, 50]} tagOuter="figure">
-              <div className="people-card end">
-                <img src={hani} />
+            <Parallax
+              className="custom-class-people"
+              x={[-50, 50]}
+              tagOuter="figure"
+            >
+              <div className="people-card">
+                <img src={Chris} />
                 <div className="name">
-                  <span style={{ fontWeight: "bold" }}>Hani</span>Mohammed
+                  <span style={{ fontWeight: "bold" }}>Christopher</span>Gaskill
                 </div>
-                <div className="desig">Founder, Pushstart</div>
+                <div className="desig">Founder, Frendshare</div>
               </div>
             </Parallax>
-            <Parallax className="custom-class" x={[-50, 50]} tagOuter="figure">
-              <div className="people-card start">
-                <img src={hani} />
+            <Parallax
+              className="custom-class-people"
+              x={[-50, 50]}
+              tagOuter="figure"
+            >
+              <div className="people-card">
+                <img src={Prakhar} />
                 <div className="name">
-                  <span style={{ fontWeight: "bold" }}>Hani</span>Mohammed
+                  <span style={{ fontWeight: "bold" }}>Prakhar</span>Shivam
                 </div>
-                <div className="desig">Founder, Pushstart</div>
+                <div className="desig">Founder, Nodestory</div>
               </div>
             </Parallax>
+          </div>
+        </div>
+
+        <div className="page edu">
+          <div>
+            <span className="page-header">
+              <Fade left cascade>
+                Education
+              </Fade>
+            </span>
           </div>
         </div>
       </React.Fragment>
