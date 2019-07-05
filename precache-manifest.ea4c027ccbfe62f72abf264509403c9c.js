@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f5444179c3d31708106cc5ec59edc3b4",
+    "revision": "cef852cd8547276803794134edcc2c34",
     "url": "/index.html"
   },
   {
-    "revision": "230e1098a31ad79b0c0d",
-    "url": "/static/css/main.37a78421.chunk.css"
+    "revision": "fa4b2ec1952e96b2e31d",
+    "url": "/static/css/main.e0cd72f5.chunk.css"
   },
   {
-    "revision": "339a87fc00b1cfe25d5f",
-    "url": "/static/js/2.aa032ab4.chunk.js"
+    "revision": "c450c4cd17de3e765244",
+    "url": "/static/js/2.06c64c69.chunk.js"
   },
   {
-    "revision": "230e1098a31ad79b0c0d",
-    "url": "/static/js/main.e035cdcd.chunk.js"
+    "revision": "fa4b2ec1952e96b2e31d",
+    "url": "/static/js/main.2474add0.chunk.js"
   },
   {
     "revision": "42ac5946195a7306e2a5",
@@ -28,8 +28,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/Chris.d611d811.png"
   },
   {
+    "revision": "faea592d449f3df6b90b92257a107cae",
+    "url": "/static/media/IIITS.faea592d.png"
+  },
+  {
     "revision": "90bae305fc4215dbc5abf50610dd7074",
     "url": "/static/media/Neeraj.90bae305.png"
+  },
+  {
+    "revision": "e541fc032eb8b4e8877b9b5408e045fd",
+    "url": "/static/media/Next.e541fc03.svg"
   },
   {
     "revision": "a5a6d8fbcb1b5ed9659709fd7be213d5",
@@ -56,8 +64,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/futureSchool-logo.d8363ab9.png"
   },
   {
+    "revision": "47e18e364b92a51df61379706a3c192e",
+    "url": "/static/media/github.47e18e36.svg"
+  },
+  {
     "revision": "4e742076d89ff1f9c6a102c096cd256d",
     "url": "/static/media/hani.4e742076.jpg"
+  },
+  {
+    "revision": "b150fca889a0cb0ffbc4ad2bbad09880",
+    "url": "/static/media/instagram.b150fca8.svg"
+  },
+  {
+    "revision": "f35867f4b251b5d328f9ffb68ceb187a",
+    "url": "/static/media/linkedin.f35867f4.svg"
   },
   {
     "revision": "73a3038a128e2bd47009f302463294c8",
