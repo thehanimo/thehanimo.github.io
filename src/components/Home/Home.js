@@ -22,6 +22,7 @@ import Neeraj from "./img/Neeraj.png";
 import Prakhar from "./img/Prakhar.png";
 import Sudhansu from "./img/Sudhansu.png";
 import Tristan from "./img/Tristan.jpg";
+import Meg from "./img/Meg.jpg";
 
 import IIITS from "./img/IIITS.png";
 
@@ -239,7 +240,7 @@ export default class Home extends Component {
           <div className="page-sub-header-container">
             <div className="page-sub-header">
               <Flip left cascade>
-                <span>Fabulous </span>
+                <span>Phenomenal </span>
                 <span style={{ fontWeight: "bold" }}>People</span>
               </Flip>
               <Fade top delay={500}>
@@ -358,6 +359,21 @@ export default class Home extends Component {
                   </div>
                 </a>
               </Parallax>
+              <Parallax
+                className="custom-class-people"
+                x={[-50, 50]}
+                tagOuter="figure"
+              >
+                <a href="http://meglc23.com" target="_blank">
+                  <div className="people-card">
+                    <img src={Meg} />
+                    <div className="name">
+                      <span style={{ fontWeight: "bold" }}>Meg</span>LiChen
+                    </div>
+                    <div className="desig">Developer, Antzknow</div>
+                  </div>
+                </a>
+              </Parallax>
             </div>
           </div>
 
@@ -377,23 +393,25 @@ export default class Home extends Component {
             >
               <div className="edu-card-container">
                 <Fade left>
-                  <div className="edu-card">
-                    <img src={IIITS} />
-                    <div className="edu-card-content">
-                      <div className="edu-card-header">
-                        Indian Institute Of Information Technology
-                      </div>
-                      <div className="edu-card-subheader">
-                        B.Tech, Computer Science Engineering{" "}
-                        <span>(Exp. '21)</span>
-                      </div>
-                      <div className="edu-card-body">
-                        A class full of creative minds, a campus so culturally
-                        diverse and a college that pushes you to the limit. What
-                        more could I ask for?
+                  <a href="http://www.iiits.ac.in" target="_blank">
+                    <div className="edu-card">
+                      <img src={IIITS} />
+                      <div className="edu-card-content">
+                        <div className="edu-card-header">
+                          Indian Institute Of Information Technology
+                        </div>
+                        <div className="edu-card-subheader">
+                          B.Tech, Computer Science Engineering{" "}
+                          <span>(Exp. '21)</span>
+                        </div>
+                        <div className="edu-card-body">
+                          A class full of creative minds, a campus so culturally
+                          diverse and a college that pushes you to the limit.
+                          What more could I ask for?
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  </a>
                 </Fade>
               </div>
             </Parallax>
@@ -407,45 +425,47 @@ export default class Home extends Component {
               </span>
             </div>
 
-            <form>
-              <div className="contact-form-container">
-                <textarea
-                  id="contact-body"
-                  className="contact-body"
-                  placeholder={
-                    "Nothing? How about some Friendly Football 🔵 🔴 / F1 🏎 Banter?\n Or Coffee ☕️ maybe? Type Away!"
-                  }
-                  onChange={() => this.validate("contact-body")}
-                />
-                <div className="contact-form-sub-container">
-                  <input
-                    id="contact-name"
-                    className="contact-name"
-                    placeholder="How can I get back to you?"
-                    onChange={() => this.validate("contact-name")}
+            <Zoom>
+              <form>
+                <div className="contact-form-container">
+                  <textarea
+                    id="contact-body"
+                    className="contact-body"
+                    placeholder={
+                      "Nothing? How about some Friendly Football 🔵 🔴 / F1 🏎 Banter?\n Or Coffee ☕️ maybe? Type Away!"
+                    }
+                    onChange={() => this.validate("contact-body")}
                   />
-                  <button
-                    className="contact-submit"
-                    onClick={this.submitForm}
-                    type="button"
-                  >
-                    Go
-                  </button>
+                  <div className="contact-form-sub-container">
+                    <input
+                      id="contact-name"
+                      className="contact-name"
+                      placeholder="How can I get back to you?"
+                      onChange={() => this.validate("contact-name")}
+                    />
+                    <button
+                      className="contact-submit"
+                      onClick={this.submitForm}
+                      type="button"
+                    >
+                      Go
+                    </button>
+                  </div>
+                  <div class="lds-ellipsis-container">
+                    {this.state.formloader && (
+                      <div class="lds-ellipsis">
+                        <div />
+                        <div />
+                        <div />
+                        <div />
+                      </div>
+                    )}
+                    {this.state.formSuccess && "Sent! 🎉"}
+                    {this.state.formError && "Sorry, Try Again 🙁"}
+                  </div>
                 </div>
-                <div class="lds-ellipsis-container">
-                  {this.state.formloader && (
-                    <div class="lds-ellipsis">
-                      <div />
-                      <div />
-                      <div />
-                      <div />
-                    </div>
-                  )}
-                  {this.state.formSuccess && "Sent! 🎉"}
-                  {this.state.formError && "Sorry, Try Again 🙁"}
-                </div>
-              </div>
-            </form>
+              </form>
+            </Zoom>
             <div className="social-container">
               <a href="https://www.linkedin.com/in/hanimo" target="_blank">
                 <img src={LinkedIn} />

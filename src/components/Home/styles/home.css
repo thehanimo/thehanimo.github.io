@@ -1,3 +1,7 @@
+a {
+  text-decoration-line: none;
+  color: black;
+}
 .main-banner {
   background-color: black;
   height: 100vh;
