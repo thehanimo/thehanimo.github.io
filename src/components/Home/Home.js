@@ -108,6 +108,22 @@ export default class Home extends Component {
           </div>
         </div>
 
+        <div className="page-bio">
+          <div className="sub-title-container">
+            <span className="text">
+              <Fade top>
+                Hi there! I’m currently mastering everything there is to
+                cross-platform App Development. Writing code for the real-world
+                is something I've always enjoyed!
+                <br />
+                <br />
+                Computers have dramatically transformed our world as we know it
+                and I'm just contributing to it, one step at a time..
+              </Fade>
+            </span>
+          </div>
+        </div>
+
         <div className="page">
           <div>
             <span className="page-header">
