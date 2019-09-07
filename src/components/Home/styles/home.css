@@ -556,6 +556,7 @@ a {
 @media (min-width: 400px) and (max-width: 870px) {
   .main-banner {
     padding-left: 20px;
+    padding-right: 0;
   }
   .page-bio {
     padding-left: 20px;
@@ -566,7 +567,7 @@ a {
     font-size: 67px;
   }
   .sub-title {
-    font-size: 23px;
+    font-size: 21px;
   }
   .nodestory {
     left: -400px;
@@ -644,6 +645,7 @@ a {
 @media (max-width: 500px) {
   .main-banner {
     padding-left: 20px;
+    padding-right: 0;
   }
   .page-bio {
     padding-left: 20px;
@@ -657,7 +659,7 @@ a {
     font-size: 60px;
   }
   .mohammed {
-    font-size: 45px;
+    font-size: 51px;
   }
   .sub-title {
     font-size: 16px;

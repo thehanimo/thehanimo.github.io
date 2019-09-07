@@ -101,7 +101,7 @@ export default class Home extends Component {
             >
               <span className="sub-title">
                 <Fade top cascade delay={800}>
-                  Developer and Graphic Designer
+                  Software Developer & Design Enthusiast.
                 </Fade>
               </span>
             </Parallax>
@@ -118,7 +118,7 @@ export default class Home extends Component {
                 <br />
                 <br />
                 Computers have dramatically transformed our world as we know it
-                and I'm just contributing to it, one step at a time..
+                and I'm just contributing to it, one step at a time.. 🌏
               </Fade>
             </span>
           </div>
