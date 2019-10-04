@@ -483,7 +483,7 @@ export default class Home extends Component {
               </form>
             </Zoom>
             <div className="social-container">
-              <a href="https://www.linkedin.com/in/hanimo" target="_blank">
+              <a href="https://www.linkedin.com/in/thehanimo" target="_blank">
                 <img src={LinkedIn} />
               </a>
               <a href="https://github.com/thehanimo" target="_blank">
