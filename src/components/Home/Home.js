@@ -31,6 +31,7 @@ import Next from "./img/Next.svg";
 import LinkedIn from "./img/linkedin.svg";
 import Github from "./img/github.svg";
 import Instagram from "./img/instagram.svg";
+import Dribble from "./img/dribble.svg";
 
 export default class Home extends Component {
   constructor(props) {
@@ -491,6 +492,9 @@ export default class Home extends Component {
               </a>
               <a href="https://instagram.com/thehanimo" target="_blank">
                 <img src={Instagram} />
+              </a>
+              <a href="https://dribbble.com/thehanimo" target="_blank">
+                <img src={Dribble} />
               </a>
             </div>
           </div>
