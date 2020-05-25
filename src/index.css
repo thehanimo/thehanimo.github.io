@@ -1,8 +1,34 @@
 body {
   margin: 0;
-  font-family: "Montserrat", sans-serif, -apple-system, BlinkMacSystemFont,
+  font-family: "MuseoSans-300", sans-serif, -apple-system, BlinkMacSystemFont,
     "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
     "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+  font-family: "MuseoSans-100";
+  src: local("MuseoSans-100"),
+    url(./assets/fonts/MuseoSans-100.otf) format("opentype");
+}
+@font-face {
+  font-family: "MuseoSans-700";
+  src: local("MuseoSans-700"),
+    url(./assets/fonts/MuseoSans-700.otf) format("opentype");
+}
+@font-face {
+  font-family: "MuseoSans-300";
+  src: local("MuseoSans-300"),
+    url(./assets/fonts/MuseoSans-300.otf) format("opentype");
+}
+@font-face {
+  font-family: "MuseoSans-500";
+  src: local("MuseoSans-500"),
+    url(./assets/fonts/MuseoSans-500.otf) format("opentype");
+}
+@font-face {
+  font-family: "MuseoSans-900";
+  src: local("MuseoSans-900"),
+    url(./assets/fonts/MuseoSans-900.otf) format("opentype");
 }
