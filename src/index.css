@@ -6,6 +6,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+html {
+  padding: env(safe-area-inset);
+}
 
 @font-face {
   font-family: "MuseoSans-100";

@@ -29,12 +29,22 @@ export default class Home extends Component {
     this.state = {
       companiesTrigger: false,
       showContactModal: false,
+      width: undefined,
     };
   }
 
   componentDidMount = () => {
-    // document.getElementById("scrollRight").scrollLeft = 10000;
+    this.resize();
+    window.addEventListener("resize", this.resize);
     init("user_fPYfAmrOM5e7hArFO7aDq");
+  };
+
+  componentWillUnmount = () => {
+    window.removeEventListener("resize", this.resize);
+  };
+
+  resize = () => {
+    this.setState({ width: window.innerWidth });
   };
 
   toggleContactModal = () => {
@@ -78,16 +88,96 @@ export default class Home extends Component {
     return body;
   };
   render() {
+    const products = [
+      {
+        bg: "#ee5253",
+        link: "https://nodestory.com",
+        title: "Nodestory",
+        subTitle: "Full Stack",
+        imageURI: NodestoryApp,
+        imageStyle: {
+          width: "60%",
+          marginTop: 0,
+        },
+      },
+      {
+        bg: "#F5B83D",
+        link: "https://pushstart.in",
+        title: "Pushstart",
+        subTitle: "Mobile Application",
+        imageURI: PushApp,
+        imageStyle: {
+          width: "60%",
+          marginTop: 0,
+        },
+      },
+      {
+        bg: "#005BAB",
+        link: "https://pwip.co",
+        title: "Pwip",
+        subTitle: "Mobile Application",
+        imageURI: PwipApp,
+        imageStyle: {
+          width: "50%",
+          marginTop: 0,
+        },
+      },
+      {
+        bg: "#4A4A4A",
+        link: "https://www.zscore.co.in",
+        title: "ZScore",
+        subTitle: "Web Application",
+        imageURI: ZSApp,
+        imageStyle: {
+          width: "80%",
+          marginTop: 30,
+          marginBottom: 30,
+        },
+      },
+      {
+        bg: "#EABAD8",
+        link: "https://www.antzknow.com",
+        title: "Antzknow",
+        subTitle: "Web Application, UI/UX",
+        imageURI: AntzknowApp,
+        imageStyle: {
+          width: "80%",
+          marginTop: 30,
+          marginBottom: 30,
+        },
+        dribbleLink: "https://dribbble.com/shots/11583582-Antzknow-Web-UI-UX",
+      },
+      {
+        bg: "#049EE2",
+        link: "http://www.thefuture.school",
+        title: "The Future School",
+        subTitle: "Code Walkthroughs",
+        imageURI: FutureSchoolApp,
+        imageStyle: {
+          width: "80%",
+          marginTop: 30,
+          marginBottom: 30,
+        },
+      },
+    ];
+    let productWidth = undefined;
+    if (this.state.width) {
+      if (this.state.width >= 768) {
+        productWidth = "50vw";
+      } else {
+        productWidth = "100vw";
+      }
+    }
     return (
       <React.Fragment>
-        <div style={{ backgroundColor: "black" }}>
+        <div
+          style={{
+            backgroundColor: "black",
+            backgroundImage: "linear-gradient(#282828, #000)",
+          }}
+        >
           <Container>
-            <Row
-              style={{
-                height: "90vh",
-                minHeight: 600,
-              }}
-            >
+            <Row style={{ paddingBottom: 80 }}>
               <Container>
                 <Row style={{ alignItems: "center", marginTop: "15%" }}>
                   <Col
@@ -282,502 +372,134 @@ export default class Home extends Component {
         >
           <Container>
             <Row style={{ paddingTop: 50, paddingBottom: 30 }}>
-              <Col
-                xs={{ size: 12, offset: 0 }}
-                sm={{ size: 12, offset: 0 }}
-                md={{ size: 6, offset: 0 }}
-                lg={{ size: 4, offset: 1 }}
-                xl={{ size: 4, offset: 2 }}
-              >
-                <h3
-                  style={{
-                    fontFamily: "MuseoSans-700",
-                    color: "#AAA",
-                    textTransform: "uppercase",
-                    lineHeight: 1.2,
-                  }}
-                >
-                  Work
-                </h3>
-                <div
-                  style={{ height: 5, width: 100, backgroundColor: "#4A4A4A" }}
-                />
+              <Col>
+                <center>
+                  <h3
+                    style={{
+                      fontFamily: "MuseoSans-700",
+                      color: "#AAA",
+                      textTransform: "uppercase",
+                      lineHeight: 1.2,
+                    }}
+                  >
+                    Work
+                  </h3>
+                  <div
+                    style={{
+                      height: 5,
+                      width: 80,
+                      backgroundColor: "#4A4A4A",
+                    }}
+                  />
+                </center>
               </Col>
             </Row>
           </Container>
         </div>
         <Container style={{ margin: 0 }}>
           <Row style={{ width: "100vw", backgroundColor: "#F3F3F3" }}>
-            <Col
-              xs="12"
-              sm="12"
-              md="6"
-              lg="6"
-              xl="6"
-              style={{
-                backgroundColor: "#ee5253",
-                width: "100%",
-              }}
-            >
-              <center>
-                <div
-                  style={{
-                    width: "100%",
-                    textAlign: "left",
-                    marginTop: 30,
-                  }}
-                >
-                  <a
-                    className="link"
-                    href="https://nodestory.com"
-                    style={{
-                      color: "#FBFBFB",
-                      fontFamily: "MuseoSans-500",
-                    }}
-                  >
-                    Nodestory
-                  </a>
-                </div>
-                <div
-                  style={{
-                    width: "100%",
-                    textAlign: "left",
-                    color: "#FBFBFB",
-                    fontFamily: "MuseoSans-300",
-                    fontSize: "0.8em",
-                  }}
-                >
-                  Full Stack
-                </div>
-                <div
-                  style={{
-                    position: "absolute",
-                    top: 30,
-                    right: 16,
-                  }}
-                >
-                  <Button
-                    outline
-                    pill
-                    href="https://nodestory.com"
-                    target="_blank"
-                    theme="light"
-                    size="sm"
-                    className="custom-light-but"
-                  >
-                    Go to site
-                  </Button>
-                </div>
-                <Fade bottom distance="30px">
-                  <img
-                    src={NodestoryApp}
-                    style={{ width: "70%", marginTop: -30 }}
-                  />
-                </Fade>
-              </center>
-            </Col>
-            <Col
-              xs="12"
-              sm="12"
-              md="6"
-              lg="6"
-              xl="6"
-              style={{
-                backgroundColor: "#F5B83D",
-                width: "100%",
-              }}
-            >
-              <center>
-                <div
-                  style={{
-                    width: "100%",
-                    textAlign: "left",
-                    marginTop: 30,
-                  }}
-                >
-                  <a
-                    className="link"
-                    href="https://pushstart.in"
-                    style={{
-                      color: "#FBFBFB",
-                      fontFamily: "MuseoSans-500",
-                    }}
-                  >
-                    Pushstart
-                  </a>
-                </div>
-                <div
-                  style={{
-                    width: "100%",
-                    textAlign: "left",
-                    color: "#FBFBFB",
-                    fontFamily: "MuseoSans-300",
-                    fontSize: "0.8em",
-                  }}
-                >
-                  Mobile Application
-                </div>
-                <div
-                  style={{
-                    position: "absolute",
-                    top: 30,
-                    right: 16,
-                  }}
-                >
-                  <Button
-                    outline
-                    pill
-                    href="https://pushstart.in"
-                    target="_blank"
-                    theme="light"
-                    size="sm"
-                    className="custom-light-but"
-                  >
-                    Go to site
-                  </Button>
-                </div>
-                <Fade bottom distance="30px" delay={250}>
-                  <img src={PushApp} style={{ width: "70%", marginTop: -25 }} />
-                </Fade>
-              </center>
-            </Col>
-            <Col
-              xs="12"
-              sm="12"
-              md="6"
-              lg="6"
-              xl="6"
-              style={{
-                backgroundColor: "#005BAB",
-                width: "100%",
-              }}
-            >
-              <center>
-                <div
-                  style={{
-                    width: "100%",
-                    textAlign: "left",
-                    marginTop: 30,
-                  }}
-                >
-                  <a
-                    className="link"
-                    href="https://pwip.co"
-                    style={{
-                      color: "#FBFBFB",
-                      fontFamily: "MuseoSans-500",
-                    }}
-                  >
-                    Pwip
-                  </a>
-                </div>
-                <div
-                  style={{
-                    width: "100%",
-                    textAlign: "left",
-                    color: "#FBFBFB",
-                    fontFamily: "MuseoSans-300",
-                    fontSize: "0.8em",
-                  }}
-                >
-                  Mobile Application
-                </div>
-                <div
-                  style={{
-                    position: "absolute",
-                    top: 30,
-                    right: 16,
-                  }}
-                >
-                  <Button
-                    outline
-                    pill
-                    href="https://pwip.co"
-                    target="_blank"
-                    theme="light"
-                    size="sm"
-                    className="custom-light-but"
-                  >
-                    Go to site
-                  </Button>
-                </div>
-                <Fade bottom distance="30px">
-                  <img src={PwipApp} style={{ width: "50%", marginTop: -20 }} />
-                </Fade>
-              </center>
-            </Col>
-            <Col
-              xs="12"
-              sm="12"
-              md="6"
-              lg="6"
-              xl="6"
-              style={{
-                backgroundColor: "#4A4A4A",
-                width: "100%",
-                display: "flex",
-                flexDirection: "column",
-              }}
-            >
-              <center>
-                <div
-                  style={{
-                    width: "100%",
-                    textAlign: "left",
-                    marginTop: 30,
-                  }}
-                >
-                  <a
-                    className="link"
-                    href="https://www.zscore.co.in"
-                    style={{
-                      color: "#FBFBFB",
-                      fontFamily: "MuseoSans-500",
-                    }}
-                  >
-                    ZScore
-                  </a>
-                </div>
-                <div
-                  style={{
-                    width: "100%",
-                    textAlign: "left",
-                    color: "#FBFBFB",
-                    fontFamily: "MuseoSans-300",
-                    fontSize: "0.8em",
-                  }}
-                >
-                  Web Application
-                </div>
-                <div
-                  style={{
-                    position: "absolute",
-                    top: 30,
-                    right: 16,
-                  }}
-                >
-                  <Button
-                    outline
-                    pill
-                    href="https://www.zscore.co.in"
-                    target="_blank"
-                    theme="light"
-                    size="sm"
-                    className="custom-light-but"
-                  >
-                    Go to site
-                  </Button>
-                </div>
-              </center>
-              <div
+            {products.map((item) => (
+              <Col
+                xs="12"
+                sm="12"
+                md="6"
+                lg="6"
+                xl="6"
                 style={{
-                  flex: 1,
+                  backgroundColor: item.bg,
                   width: "100%",
-                  marginBottom: 46,
-                  justifyContent: "center",
-                  alignItems: "center",
+                  height: productWidth,
                   display: "flex",
+                  flexDirection: "column",
                 }}
               >
-                <Fade bottom distance="30px" delay={250}>
-                  <img
-                    src={ZSApp}
-                    style={{
-                      width: "80%",
-                      marginTop: 30,
-                      marginBottom: 30,
-                    }}
-                  />
-                </Fade>
-              </div>
-            </Col>
-            <Col
-              xs="12"
-              sm="12"
-              md="6"
-              lg="6"
-              xl="6"
-              style={{
-                backgroundColor: "#EABAD8",
-                width: "100%",
-                display: "flex",
-                flexDirection: "column",
-              }}
-            >
-              <center>
-                <div
-                  style={{
-                    width: "100%",
-                    textAlign: "left",
-                    marginTop: 30,
-                  }}
-                >
-                  <a
-                    className="link"
-                    href="https://www.antzknow.com"
-                    style={{
-                      color: "#FBFBFB",
-                      fontFamily: "MuseoSans-500",
-                    }}
-                  >
-                    Antzknow
-                  </a>
-                </div>
-                <div
-                  style={{
-                    width: "100%",
-                    textAlign: "left",
-                    color: "#FBFBFB",
-                    fontFamily: "MuseoSans-300",
-                    fontSize: "0.8em",
-                  }}
-                >
-                  Web Application, UI/UX
-                </div>
-                <div
-                  style={{
-                    position: "absolute",
-                    top: 30,
-                    right: 16,
-                  }}
-                >
+                <center>
                   <div
                     style={{
-                      float: "left",
-                      height: 20,
-                      width: 20,
-                      marginTop: 2,
-                      marginRight: 10,
+                      width: "100%",
+                      textAlign: "left",
+                      marginTop: 30,
                     }}
                   >
                     <a
-                      href="https://dribbble.com/shots/11583582-Antzknow-Web-UI-UX"
+                      className="link"
                       target="_blank"
-                      className="custom-link-anim"
+                      href={item.link}
+                      style={{
+                        color: "#FBFBFB",
+                        fontFamily: "MuseoSans-500",
+                      }}
                     >
-                      <img src={Dribble} />
+                      {item.title}
                     </a>
                   </div>
-                  <Button
-                    outline
-                    pill
-                    href="https://www.antzknow.com"
-                    target="_blank"
-                    theme="light"
-                    size="sm"
-                    className="custom-light-but"
-                  >
-                    Go to site
-                  </Button>
-                </div>
-              </center>
-              <div
-                style={{
-                  flex: 1,
-                  width: "100%",
-                  marginBottom: 46,
-                  justifyContent: "center",
-                  alignItems: "center",
-                  display: "flex",
-                }}
-              >
-                <Fade bottom distance="30px">
-                  <img
-                    src={AntzknowApp}
+                  <div
                     style={{
-                      width: "80%",
-                      marginTop: 30,
-                      marginBottom: 30,
-                    }}
-                  />
-                </Fade>
-              </div>
-            </Col>
-            <Col
-              xs="12"
-              sm="12"
-              md="6"
-              lg="6"
-              xl="6"
-              style={{
-                backgroundColor: "#049EE2",
-                width: "100%",
-                display: "flex",
-                flexDirection: "column",
-              }}
-            >
-              <center>
-                <div
-                  style={{
-                    width: "100%",
-                    textAlign: "left",
-                    marginTop: 30,
-                  }}
-                >
-                  <a
-                    className="link"
-                    href="http://www.thefuture.school"
-                    style={{
+                      width: "100%",
+                      textAlign: "left",
                       color: "#FBFBFB",
-                      fontFamily: "MuseoSans-500",
+                      fontFamily: "MuseoSans-300",
+                      fontSize: "0.8em",
                     }}
                   >
-                    The Future School
-                  </a>
-                </div>
-                <div
-                  style={{
-                    width: "100%",
-                    textAlign: "left",
-                    color: "#FBFBFB",
-                    fontFamily: "MuseoSans-300",
-                    fontSize: "0.8em",
-                  }}
-                >
-                  Code Walkthroughs
-                </div>
-                <div
-                  style={{
-                    position: "absolute",
-                    top: 30,
-                    right: 16,
-                  }}
-                >
-                  <Button
-                    outline
-                    pill
-                    href="http://www.thefuture.school"
-                    target="_blank"
-                    theme="light"
-                    size="sm"
-                    className="custom-light-but"
-                  >
-                    Go to site
-                  </Button>
-                </div>
-              </center>
-              <div
-                style={{
-                  flex: 1,
-                  width: "100%",
-                  marginBottom: 46,
-                  justifyContent: "center",
-                  alignItems: "center",
-                  display: "flex",
-                }}
-              >
-                <Fade bottom distance="30px" delay={250}>
-                  <img
-                    src={FutureSchoolApp}
+                    {item.subTitle}
+                  </div>
+                  <div
                     style={{
-                      width: "80%",
-                      marginTop: 30,
-                      marginBottom: 30,
+                      position: "absolute",
+                      top: 30,
+                      right: 16,
                     }}
-                  />
-                </Fade>
-              </div>
-            </Col>
+                  >
+                    {item.dribbleLink && (
+                      <div
+                        style={{
+                          float: "left",
+                          height: 20,
+                          width: 20,
+                          marginTop: 2,
+                          marginRight: 10,
+                        }}
+                      >
+                        <a
+                          href="https://dribbble.com/shots/11583582-Antzknow-Web-UI-UX"
+                          target="_blank"
+                          className="custom-link-anim"
+                        >
+                          <img src={Dribble} />
+                        </a>
+                      </div>
+                    )}
+                    <Button
+                      outline
+                      pill
+                      href={item.link}
+                      target="_blank"
+                      theme="light"
+                      size="sm"
+                      className="custom-light-but"
+                    >
+                      Go to site
+                    </Button>
+                  </div>
+                </center>
+                <div
+                  style={{
+                    flex: 1,
+                    width: "100%",
+                    marginBottom: 16,
+                    marginTop: 16,
+                    justifyContent: "center",
+                    alignItems: "center",
+                    display: "flex",
+                  }}
+                >
+                  <Fade bottom distance="30px" delay={250}>
+                    <img src={item.imageURI} style={item.imageStyle} />
+                  </Fade>
+                </div>
+              </Col>
+            ))}
           </Row>
         </Container>
         <div
@@ -788,26 +510,26 @@ export default class Home extends Component {
         >
           <Container>
             <Row style={{ paddingTop: 50, paddingBottom: 30 }}>
-              <Col
-                xs={{ size: 12, offset: 0 }}
-                sm={{ size: 12, offset: 0 }}
-                md={{ size: 6, offset: 0 }}
-                lg={{ size: 4, offset: 1 }}
-                xl={{ size: 4, offset: 2 }}
-              >
-                <h3
-                  style={{
-                    fontFamily: "MuseoSans-700",
-                    color: "#4A4A4A",
-                    textTransform: "uppercase",
-                    lineHeight: 1.2,
-                  }}
-                >
-                  Education
-                </h3>
-                <div
-                  style={{ height: 5, width: 100, backgroundColor: "#DADADA" }}
-                />
+              <Col>
+                <center>
+                  <h3
+                    style={{
+                      fontFamily: "MuseoSans-700",
+                      color: "#4A4A4A",
+                      textTransform: "uppercase",
+                      lineHeight: 1.2,
+                    }}
+                  >
+                    Education
+                  </h3>
+                  <div
+                    style={{
+                      height: 5,
+                      width: 120,
+                      backgroundColor: "#DADADA",
+                    }}
+                  />
+                </center>
               </Col>
             </Row>
             <Row
