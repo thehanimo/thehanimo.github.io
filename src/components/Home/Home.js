@@ -210,8 +210,8 @@ export default class Home extends Component {
                           fontFamily: "MuseoSans-300",
                         }}
                       >
-                        Hi! I'm Hani Mohammed and writing code for the
-                        real-world is what I do.
+                        Hi! I'm Hani Mohammed and writing code for the real
+                        world is what I do.
                       </p>
                     </Fade>
                     <Fade top distance="20px" delay={500}>
