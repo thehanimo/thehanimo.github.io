@@ -4,6 +4,7 @@ import { Button, Modal, ModalBody, ModalHeader } from "shards-react";
 import Fade from "react-reveal/Fade";
 import Flip from "react-reveal/Flip";
 import Zoom from "react-reveal/Zoom";
+import Pulse from "react-reveal/Pulse";
 import { send, init } from "emailjs-com";
 
 import "./styles/home.css";
@@ -15,6 +16,9 @@ import PwipApp from "../../assets/img/Pwip-app.png";
 import AntzknowApp from "../../assets/img/Antzknow-app.png";
 import ZSApp from "../../assets/img/ZS-app.png";
 import FutureSchoolApp from "../../assets/img/FutureSchool-app.png";
+
+import RNAudioKit from "../../assets/img/RNAudioKit.png";
+import PRCheck from "../../assets/img/PRCheck.png";
 
 import IIITS from "../../assets/img/IIITS.png";
 
@@ -149,7 +153,6 @@ export default class Home extends Component {
       },
       {
         bg: "#049EE2",
-        link: "http://www.thefuture.school",
         title: "The Future School",
         subTitle: "Code Walkthroughs",
         imageURI: FutureSchoolApp,
@@ -168,8 +171,11 @@ export default class Home extends Component {
         productWidth = "100vw";
       }
     }
+    var ua = window.navigator.userAgent;
+    var iOS = !!ua.match(/iPad/i) || !!ua.match(/iPhone/i);
     return (
       <React.Fragment>
+        {iOS && <div className="ios-peek" />}
         <div
           style={{
             backgroundColor: "black",
@@ -398,7 +404,7 @@ export default class Home extends Component {
         </div>
         <Container style={{ margin: 0 }}>
           <Row style={{ width: "100vw", backgroundColor: "#F3F3F3" }}>
-            {products.map((item) => (
+            {products.map((item, index) => (
               <Col
                 xs="12"
                 sm="12"
@@ -422,12 +428,12 @@ export default class Home extends Component {
                     }}
                   >
                     <a
-                      className="link"
+                      className={item.link ? "link" : null}
                       target="_blank"
                       href={item.link}
                       style={{
                         color: "#FBFBFB",
-                        fontFamily: "MuseoSans-500",
+                        fontFamily: "MuseoSans-700",
                       }}
                     >
                       {item.title}
@@ -438,7 +444,7 @@ export default class Home extends Component {
                       width: "100%",
                       textAlign: "left",
                       color: "#FBFBFB",
-                      fontFamily: "MuseoSans-300",
+                      fontFamily: "MuseoSans-500",
                       fontSize: "0.8em",
                     }}
                   >
@@ -462,7 +468,7 @@ export default class Home extends Component {
                         }}
                       >
                         <a
-                          href="https://dribbble.com/shots/11583582-Antzknow-Web-UI-UX"
+                          href={item.dribbleLink}
                           target="_blank"
                           className="custom-link-anim"
                         >
@@ -470,17 +476,19 @@ export default class Home extends Component {
                         </a>
                       </div>
                     )}
-                    <Button
-                      outline
-                      pill
-                      href={item.link}
-                      target="_blank"
-                      theme="light"
-                      size="sm"
-                      className="custom-light-but"
-                    >
-                      Go to site
-                    </Button>
+                    {item.link && (
+                      <Button
+                        outline
+                        pill
+                        href={item.link}
+                        target="_blank"
+                        theme="light"
+                        size="sm"
+                        className="custom-light-but"
+                      >
+                        Go to site
+                      </Button>
+                    )}
                   </div>
                 </center>
                 <div
@@ -494,7 +502,7 @@ export default class Home extends Component {
                     display: "flex",
                   }}
                 >
-                  <Fade bottom distance="30px" delay={250}>
+                  <Fade bottom distance="30px" delay={200 * (index % 2)}>
                     <img src={item.imageURI} style={item.imageStyle} />
                   </Fade>
                 </div>
@@ -502,6 +510,320 @@ export default class Home extends Component {
             ))}
           </Row>
         </Container>
+        <div
+          style={{
+            backgroundColor: "#E6ECF0",
+            paddingBottom: 80,
+            justifyContent: "center",
+            alignItems: "center",
+            display: "flex",
+          }}
+        >
+          <Container style={{ margin: 0 }}>
+            <Row style={{ paddingTop: 50, paddingBottom: 50 }}>
+              <Col>
+                <center>
+                  <h3
+                    style={{
+                      fontFamily: "MuseoSans-700",
+                      color: "#4A4A4A",
+                      textTransform: "uppercase",
+                      lineHeight: 1.2,
+                    }}
+                  >
+                    Projects
+                  </h3>
+                  <div
+                    style={{
+                      height: 5,
+                      width: 120,
+                      backgroundColor: "#DADADA",
+                    }}
+                  />
+                </center>
+              </Col>
+            </Row>
+            <Row>
+              <Col
+                xs="12"
+                sm="12"
+                md="6"
+                lg="6"
+                xl="6"
+                style={{
+                  width: "100%",
+                  flexDirection: "row",
+                  display: "flex",
+                  alignItems: "flex-start",
+                  justifyContent: "center",
+                  padding: 0,
+                  paddingBottom: 50,
+                }}
+              >
+                <Fade bottom distance="30px" delay={200}>
+                  <div style={{ width: "30%", maxWidth: 150 }}>
+                    <a
+                      href="https://github.com/thehanimo/react-native-audiokit"
+                      target="_blank"
+                    >
+                      <img
+                        src={RNAudioKit}
+                        className="project"
+                        style={{ marginTop: -10 }}
+                      />
+                    </a>
+                  </div>
+                  <div style={{ width: "60%", marginLeft: 12 }}>
+                    <div>
+                      <a
+                        href="https://github.com/thehanimo/react-native-audiokit"
+                        target="_blank"
+                        className="edu-card-header link-dark"
+                        style={{
+                          fontFamily: "MuseoSans-700",
+                          fontSize: "1.2em",
+                        }}
+                      >
+                        React Native AudioKit
+                      </a>
+                    </div>
+                    <div
+                      className="edu-card-subheader"
+                      style={{
+                        maxWidth: 290,
+                        fontSize: "0.8em",
+                        marginBottom: 16,
+                      }}
+                    >
+                      Exposes AudioKit for iOS to React Native
+                    </div>
+                    <Button
+                      outline
+                      pill
+                      href="https://github.com/thehanimo/react-native-audiokit"
+                      target="_blank"
+                      theme="dark"
+                      size="sm"
+                      style={{ marginLeft: -4 }}
+                    >
+                      View on Github
+                    </Button>
+                  </div>
+                </Fade>
+              </Col>
+
+              <Col
+                xs="12"
+                sm="12"
+                md="6"
+                lg="6"
+                xl="6"
+                style={{
+                  width: "100%",
+                  flexDirection: "row",
+                  display: "flex",
+                  alignItems: "flex-start",
+                  justifyContent: "center",
+                  padding: 0,
+                  paddingBottom: 50,
+                }}
+              >
+                <Fade bottom distance="30px" delay={400}>
+                  <div style={{ width: "30%", maxWidth: 150 }}>
+                    <a
+                      href="https://github.com/thehanimo/pr-title-checker"
+                      target="_blank"
+                    >
+                      <img
+                        src={PRCheck}
+                        className="project"
+                        style={{ marginTop: -10 }}
+                      />
+                    </a>
+                  </div>
+                  <div style={{ width: "60%", marginLeft: 12 }}>
+                    <div>
+                      <a
+                        href="https://github.com/thehanimo/pr-title-checker"
+                        target="_blank"
+                        className="edu-card-header link-dark"
+                        style={{
+                          fontFamily: "MuseoSans-700",
+                          fontSize: "1.2em",
+                        }}
+                      >
+                        PR Title Checker
+                      </a>
+                    </div>
+                    <div
+                      className="edu-card-subheader"
+                      style={{
+                        maxWidth: 290,
+                        fontSize: "0.8em",
+                        marginBottom: 16,
+                      }}
+                    >
+                      A Github Action to check if pull request titles conform to
+                      Contribution Guidelines
+                    </div>
+                    <Button
+                      outline
+                      pill
+                      href="https://github.com/thehanimo/pr-title-checker"
+                      target="_blank"
+                      theme="dark"
+                      size="sm"
+                      style={{ marginLeft: -4 }}
+                    >
+                      View on Github
+                    </Button>
+                  </div>
+                </Fade>
+              </Col>
+            </Row>
+            <Row>
+              <Col>
+                <center>
+                  <p
+                    style={{
+                      fontFamily: "MuseoSans-100",
+                      textTransform: "uppercase",
+                      fontSize: 22,
+                      marginTop: 10,
+                      marginBottom: 20,
+                    }}
+                  >
+                    Contributions
+                  </p>
+                  <Fade top cascade>
+                    <div>
+                      <div style={{ marginBottom: 6 }}>
+                        <a
+                          href="https://github.com/SystangoTechnologies/react-native-apple-authentication"
+                          target="_blank"
+                          className="link-dark"
+                        >
+                          SystangoTechnologies/react-native-apple-authentication
+                        </a>
+                      </div>
+                      <div style={{ marginBottom: 6 }}>
+                        <a
+                          href="https://github.com/react-native-community/react-native-blur"
+                          target="_blank"
+                          className="link-dark"
+                        >
+                          @react-native-community/blur
+                        </a>
+                      </div>
+                      <div style={{ marginBottom: 6 }}>
+                        <a
+                          href="https://github.com/facebook/docusaurus"
+                          target="_blank"
+                          className="link-dark"
+                        >
+                          facebook/docusaurus
+                        </a>
+                      </div>
+                      <div style={{ marginBottom: 6 }}>
+                        <a
+                          href="https://github.com/facebook/react-native-website"
+                          target="_blank"
+                          className="link-dark"
+                        >
+                          facebook/react-native-website
+                        </a>
+                      </div>
+                      <div style={{ marginBottom: 6 }}>
+                        <a
+                          href="https://github.com/Kong/kong"
+                          target="_blank"
+                          className="link-dark"
+                        >
+                          Kong/kong
+                        </a>
+                      </div>
+                      <div style={{ marginBottom: 6 }}>
+                        <a
+                          href="https://github.com/gatsbyjs/gatsby"
+                          target="_blank"
+                          className="link-dark"
+                        >
+                          gatsbyjs/gatsby
+                        </a>
+                      </div>
+                    </div>
+                  </Fade>
+                </center>
+              </Col>
+            </Row>
+          </Container>
+        </div>
+
+        <div
+          style={{
+            backgroundColor: "#fef9ee",
+            paddingBottom: 80,
+            justifyContent: "center",
+            alignItems: "center",
+            display: "flex",
+          }}
+        >
+          <Container style={{ margin: 0 }}>
+            <Row style={{ paddingTop: 50, paddingBottom: 30 }}>
+              <Col>
+                <center>
+                  <h3
+                    style={{
+                      fontFamily: "MuseoSans-700",
+                      color: "#4A4A4A",
+                      textTransform: "uppercase",
+                      lineHeight: 1.2,
+                    }}
+                  >
+                    Publications
+                  </h3>
+                  <div
+                    style={{
+                      height: 5,
+                      width: 120,
+                      backgroundColor: "#DADADA",
+                    }}
+                  />
+                </center>
+              </Col>
+            </Row>
+            <Row>
+              <Col lg={{ size: 8, order: 2, offset: 2 }}>
+                <Fade bottom distance="30px" delay={200}>
+                  <div>
+                    <a
+                      href="https://ieeexplore.ieee.org/abstract/document/9288271"
+                      target="_blank"
+                      className="link-dark-normal"
+                    >
+                      <li
+                        style={{
+                          paddingLeft: 16,
+                          paddingRight: 16,
+                          fontFamily: "MuseoSans-300",
+                        }}
+                      >
+                        Mohammed, Hani, Venkat Himavanth Reddy, and Subu
+                        Kandaswamy.
+                        <span style={{ fontFamily: "MuseoSans-700" }}>
+                          "A Decentralized Strategy for Cooperative Driving
+                          among Autonomous Cars at Lane Closures."
+                        </span>{" "}
+                        2020 IEEE 32nd International Conference on Tools with
+                        Artificial Intelligence (ICTAI). IEEE, 2020.
+                      </li>
+                    </a>
+                  </div>
+                </Fade>
+              </Col>
+            </Row>
+          </Container>
+        </div>
         <div
           style={{
             backgroundColor: "#F3F3F3",
@@ -538,34 +860,42 @@ export default class Home extends Component {
                 alignItems: "center",
               }}
             >
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  marginLeft: 20,
-                  marginRight: 20,
-                }}
-              >
-                <img src={IIITS} style={{ width: "15%", float: "left" }} />
-                <div style={{ marginLeft: 12 }}>
-                  <div>
-                    <a
-                      href="https://www.iiits.ac.in"
-                      target="_blank"
-                      className="edu-card-header link-dark"
-                    >
-                      Indian Institute Of Information Technology
-                    </a>
-                  </div>
-                  <div className="edu-card-subheader">
-                    B.Tech, Computer Science Engineering <span>(Exp. '21)</span>
+              <Fade bottom distance="30px" delay={200}>
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    marginLeft: 20,
+                    marginRight: 20,
+                  }}
+                >
+                  <img
+                    src={IIITS}
+                    style={{ width: "25%", float: "left", maxWidth: 133 }}
+                  />
+                  <div style={{ marginLeft: 12 }}>
+                    <div>
+                      <a
+                        href="https://www.iiits.ac.in"
+                        target="_blank"
+                        className="edu-card-header link-dark"
+                        style={{ fontSize: "1.2em" }}
+                      >
+                        Indian Institute Of Information Technology
+                      </a>
+                    </div>
+                    <div className="edu-card-subheader">
+                      B.Tech, Computer Science Engineering{" "}
+                      <span>(Exp. '21)</span>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </Fade>
             </Row>
           </Container>
         </div>
+
         <div
           style={{
             backgroundColor: "#F3F3F3",

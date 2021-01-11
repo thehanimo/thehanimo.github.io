@@ -8,6 +8,11 @@ body {
 }
 html {
   padding: env(safe-area-inset);
+  background: -o-linear-gradient(bottom, #f3f3f3 50%, #282828 50%);
+  background: -moz-linear-gradient(bottom, #f3f3f3 50%, #282828 50%);
+  background: -webkit-linear-gradient(bottom, #f3f3f3 50%, #282828 50%);
+  background: -ms-linear-gradient(bottom, #f3f3f3 50%, #282828 50%);
+  background: linear-gradient(to bottom, #f3f3f3 50%, #282828 50%);
 }
 
 @font-face {
