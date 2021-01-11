@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.22c7f8f8.chunk.css",
+    "main.css": "/static/css/main.3ef20952.chunk.css",
     "main.js": "/static/js/main.43db0c33.chunk.js",
     "main.js.map": "/static/js/main.43db0c33.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.e4367730.js",
@@ -9,10 +9,10 @@
     "static/js/2.e14c86ca.chunk.js": "/static/js/2.e14c86ca.chunk.js",
     "static/js/2.e14c86ca.chunk.js.map": "/static/js/2.e14c86ca.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.6148941f55febaea718e1f3c14fb0a87.js": "/precache-manifest.6148941f55febaea718e1f3c14fb0a87.js",
+    "precache-manifest.ae1c623c4d91c773fa1940f9780a288a.js": "/precache-manifest.ae1c623c4d91c773fa1940f9780a288a.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.f7e6c76a.chunk.css.map": "/static/css/2.f7e6c76a.chunk.css.map",
-    "static/css/main.22c7f8f8.chunk.css.map": "/static/css/main.22c7f8f8.chunk.css.map",
+    "static/css/main.3ef20952.chunk.css.map": "/static/css/main.3ef20952.chunk.css.map",
     "static/js/2.e14c86ca.chunk.js.LICENSE.txt": "/static/js/2.e14c86ca.chunk.js.LICENSE.txt",
     "static/media/Antzknow-app.png": "/static/media/Antzknow-app.1072e76e.png",
     "static/media/FutureSchool-app.png": "/static/media/FutureSchool-app.ec32918c.png",
@@ -34,7 +34,7 @@
     "static/js/runtime-main.e4367730.js",
     "static/css/2.f7e6c76a.chunk.css",
     "static/js/2.e14c86ca.chunk.js",
-    "static/css/main.22c7f8f8.chunk.css",
+    "static/css/main.3ef20952.chunk.css",
     "static/js/main.43db0c33.chunk.js"
   ]
 }
