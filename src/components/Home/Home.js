@@ -928,7 +928,7 @@ export default class Home extends Component {
                 lg={{ size: 5, offset: 0 }}
                 xl={{ size: 4, offset: 3 }}
               >
-                Copyright © 2020 Hani Mohammed. All rights reserved.
+                Copyright © 2021 Hani Mohammed. All rights reserved.
               </Col>
             </Row>
           </Container>
