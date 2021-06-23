@@ -95,7 +95,7 @@ export default class Home extends Component {
     const products = [
       {
         bg: "#ee5253",
-        link: "https://nodestory.com",
+        link: "https://apps.apple.com/us/app/nodestory/id1454174347",
         title: "Nodestory",
         subTitle: "Full Stack",
         imageURI: NodestoryApp,
