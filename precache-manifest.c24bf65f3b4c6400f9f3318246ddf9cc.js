@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f820f0daa88a3b138b3decbf5106554c",
+    "revision": "103134b54dbef04a0dca871aaef912b8",
     "url": "/index.html"
   },
   {
-    "revision": "154322e6253add66f585",
+    "revision": "5c7f8e3d46f84e0f5087",
     "url": "/static/css/2.f7e6c76a.chunk.css"
   },
   {
-    "revision": "56411cdda8095df6a3e0",
-    "url": "/static/css/main.22c7f8f8.chunk.css"
+    "revision": "303b57237db28e9acd64",
+    "url": "/static/css/main.476a6c71.chunk.css"
   },
   {
-    "revision": "154322e6253add66f585",
-    "url": "/static/js/2.3bddb0a5.chunk.js"
+    "revision": "5c7f8e3d46f84e0f5087",
+    "url": "/static/js/2.171bda8d.chunk.js"
   },
   {
     "revision": "bc1a73d08d8433691746793d8481dea3",
-    "url": "/static/js/2.3bddb0a5.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.171bda8d.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "56411cdda8095df6a3e0",
-    "url": "/static/js/main.8cfd96e1.chunk.js"
+    "revision": "303b57237db28e9acd64",
+    "url": "/static/js/main.c5067e04.chunk.js"
   },
   {
     "revision": "19a9e749b673e5c2b9c6",
@@ -32,6 +32,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/Antzknow-app.1072e76e.png"
   },
   {
+    "revision": "fa2faa59e52b4215c050a3efee59b98d",
+    "url": "/static/media/Cambon-Light.fa2faa59.woff2"
+  },
+  {
     "revision": "ec32918c81d04d1ec33dd8a4be706f56",
     "url": "/static/media/FutureSchool-app.ec32918c.png"
   },
@@ -40,24 +44,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/IIITS.faea592d.png"
   },
   {
-    "revision": "f685618a57314edf0b910a2a8a572cd7",
-    "url": "/static/media/MuseoSans-100.f685618a.otf"
+    "revision": "f41225c23db296664b639febafd7e7b1",
+    "url": "/static/media/MierA-Book.f41225c2.woff2"
   },
   {
-    "revision": "bdb59b808cfc4fb88f3963fa06e6c79b",
-    "url": "/static/media/MuseoSans-300.bdb59b80.otf"
+    "revision": "214c7c91fcd2dfdae85e4f4ad5e7a3c9",
+    "url": "/static/media/MierA-DemiBold.214c7c91.woff2"
   },
   {
-    "revision": "62c0135163427c652ae397f327f85010",
-    "url": "/static/media/MuseoSans-500.62c01351.otf"
-  },
-  {
-    "revision": "10aaa353d22c131091d217c83f558343",
-    "url": "/static/media/MuseoSans-700.10aaa353.otf"
-  },
-  {
-    "revision": "f5d070fca3ddc0fce188de14f62bf795",
-    "url": "/static/media/MuseoSans-900.f5d070fc.otf"
+    "revision": "5e3c2e991afa46b8f065ff25a11ed7fd",
+    "url": "/static/media/MierA-Regular.5e3c2e99.woff2"
   },
   {
     "revision": "8b4b21bb2fb16089b3c7165cfbbb5b12",
@@ -84,6 +80,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/ZS-app.933c095f.png"
   },
   {
+    "revision": "59188f98806aaf66f43a813a994ac69c",
+    "url": "/static/media/dribble-dark.59188f98.svg"
+  },
+  {
     "revision": "29a152db0eb4f303e0804ed8a9987bbc",
     "url": "/static/media/dribble.29a152db.svg"
   },
@@ -92,8 +92,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/github.47e18e36.svg"
   },
   {
-    "revision": "4e742076d89ff1f9c6a102c096cd256d",
-    "url": "/static/media/hani.4e742076.jpg"
+    "revision": "26d7cb3d954276ea6f632013464e3ee3",
+    "url": "/static/media/hani.26d7cb3d.jpg"
   },
   {
     "revision": "b150fca889a0cb0ffbc4ad2bbad09880",
@@ -106,5 +106,9 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "365c8088f6e9d2cc0837b6b94962bc4b",
     "url": "/static/media/skillbee.365c8088.png"
+  },
+  {
+    "revision": "8c868e766c76bd64458dca52842f5a61",
+    "url": "/static/media/twitter.8c868e76.svg"
   }
 ]);
