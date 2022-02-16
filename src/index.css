@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: "MuseoSans-300", sans-serif, -apple-system, BlinkMacSystemFont,
+  font-family: "MierA-Regular", sans-serif, -apple-system, BlinkMacSystemFont,
     "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
     "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -16,27 +16,22 @@ html {
 }
 
 @font-face {
-  font-family: "MuseoSans-100";
-  src: local("MuseoSans-100"),
-    url(./assets/fonts/MuseoSans-100.otf) format("opentype");
+  font-family: "MierA-Regular";
+  src: local("MierA-Regular"),
+    url(./assets/fonts/MierA-Regular.woff2) format("opentype");
 }
 @font-face {
-  font-family: "MuseoSans-700";
-  src: local("MuseoSans-700"),
-    url(./assets/fonts/MuseoSans-700.otf) format("opentype");
+  font-family: "MierA-Book";
+  src: local("MierA-Book"),
+    url(./assets/fonts/MierA-Book.woff2) format("opentype");
 }
 @font-face {
-  font-family: "MuseoSans-300";
-  src: local("MuseoSans-300"),
-    url(./assets/fonts/MuseoSans-300.otf) format("opentype");
+  font-family: "MierA-DemiBold";
+  src: local("MierA-DemiBold"),
+    url(./assets/fonts/MierA-DemiBold.woff2) format("opentype");
 }
 @font-face {
-  font-family: "MuseoSans-500";
-  src: local("MuseoSans-500"),
-    url(./assets/fonts/MuseoSans-500.otf) format("opentype");
-}
-@font-face {
-  font-family: "MuseoSans-900";
-  src: local("MuseoSans-900"),
-    url(./assets/fonts/MuseoSans-900.otf) format("opentype");
+  font-family: "Cambon-Light";
+  src: local("Cambon-Light"),
+    url(./assets/fonts/Cambon-Light.woff2) format("opentype");
 }

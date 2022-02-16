@@ -26,7 +26,9 @@ import IIITS from "../../assets/img/IIITS.png";
 import LinkedIn from "../../assets/img/linkedin.svg";
 import Github from "../../assets/img/github.svg";
 import Instagram from "../../assets/img/instagram.svg";
+import Twitter from "../../assets/img/twitter.svg";
 import Dribble from "../../assets/img/dribble.svg";
+import DribbleDark from "../../assets/img/dribble-dark.svg";
 import WindowWidth from "../WindowWidth/WindowWidth";
 
 export default class Home extends Component {
@@ -99,7 +101,7 @@ export default class Home extends Component {
         bg: "#575fcf",
         link: "https://skillbee.com",
         title: "Skillbee",
-        subTitle: "Software Developer",
+        subTitle: "Founding Engineer",
         imageURI: SkillbeeApp,
         imageStyle: {
           mobileWidth: "90%",
@@ -110,7 +112,7 @@ export default class Home extends Component {
       },
       {
         bg: "#ee5253",
-        link: "https://apps.apple.com/us/app/nodestory/id1454174347",
+        link: "https://www.producthunt.com/posts/nodestory",
         title: "Nodestory",
         subTitle: "Full Stack",
         imageURI: NodestoryApp,
@@ -129,6 +131,7 @@ export default class Home extends Component {
           width: "60%",
           marginTop: -30,
         },
+        light: true,
       },
       {
         bg: "#005BAB",
@@ -155,7 +158,6 @@ export default class Home extends Component {
       },
       {
         bg: "#EABAD8",
-        link: "https://www.antzknow.com",
         title: "Antzknow",
         subTitle: "Web Application, UI/UX",
         imageURI: AntzknowApp,
@@ -165,6 +167,7 @@ export default class Home extends Component {
           marginBottom: 30,
         },
         dribbleLink: "https://dribbble.com/shots/11583582-Antzknow-Web-UI-UX",
+        light: true,
       },
       {
         bg: "#049EE2",
@@ -200,39 +203,44 @@ export default class Home extends Component {
               }}
             >
               <Container>
-                <Row style={{ paddingBottom: 80 }}>
+                <Row style={{}}>
                   <Container>
-                    <Row style={{ alignItems: "center", marginTop: "15%" }}>
+                    <div
+                      style={{
+                        position: "absolute",
+                        top: 40,
+                        right: 40,
+                        color: "#fff",
+                        fontFamily: "MierA-DemiBold",
+                      }}
+                    >
+                      <img
+                        src={hani}
+                        alt="Hani Mohammed"
+                        className="avatar"
+                        style={{ height: 26, width: 26, marginRight: 8 }}
+                      />
+                      thehanimo
+                    </div>
+                    <Row style={{ alignItems: "center", marginTop: "100px" }}>
                       <Col
-                        xs={{ size: 8, order: 3, offset: 1 }}
-                        sm={{ size: 8, order: 3, offset: 1 }}
-                        md={{ size: 5, order: 1, offset: 1 }}
-                        lg={{ size: 4, order: 1, offset: 2 }}
-                        xl={{ size: 4, order: 1, offset: 2 }}
+                        xs={{ size: 10, offset: 1 }}
+                        sm={{ size: 10, offset: 1 }}
+                        md={{ size: 6, offset: 0 }}
+                        lg={{ size: 5, offset: 1 }}
+                        xl={{ size: 4, offset: 2 }}
                       >
                         <Fade left distance="20px" duration={1500}>
                           <h2
                             style={{
-                              fontFamily: "MuseoSans-900",
+                              fontFamily: "Cambon-Light",
                               color: "#FBFBFB",
-                              textTransform: "uppercase",
+                              // textTransform: "uppercase",
                               lineHeight: 1.2,
                             }}
                           >
-                            Hani <br />
-                            Mohammed
+                            Hani Mohammed
                           </h2>
-                        </Fade>
-                        <Fade top distance="20px" delay={250}>
-                          <p
-                            style={{
-                              color: "#8D8D8D",
-                              fontFamily: "MuseoSans-300",
-                            }}
-                          >
-                            Hey there! I design and develop software for the
-                            real world 🌎
-                          </p>
                         </Fade>
                         <Fade top distance="20px" delay={500}>
                           <div
@@ -245,7 +253,7 @@ export default class Home extends Component {
                               href="mailto:thehanimo@gmail.com"
                               style={{
                                 color: "#FBFBFB",
-                                fontFamily: "MuseoSans-300",
+                                fontFamily: "MierA-Regular",
                               }}
                             >
                               thehanimo@gmail.com
@@ -271,10 +279,10 @@ export default class Home extends Component {
                           </Zoom>
                           <Zoom delay={950}>
                             <a
-                              href="https://dribbble.com/thehanimo"
+                              href="https://twitter.com/thehanimo"
                               target="_blank"
                             >
-                              <img src={Dribble} />
+                              <img src={Twitter} style={{ height: 18 }} />
                             </a>
                           </Zoom>
                         </div>
@@ -285,102 +293,85 @@ export default class Home extends Component {
                           cascade
                           duration={750}
                         >
-                          <div style={{ marginLeft: -4 }}>
-                            <Button
-                              outline
-                              pill
-                              onClick={this.toggleContactModal}
-                            >
-                              Say Hello!
-                            </Button>
+                          <div style={{ marginLeft: -4, marginBottom: 32 }}>
                             <Button
                               outline
                               pill
                               href="/Hani_Resume.pdf"
                               target="_blank"
-                              theme="secondary"
-                              style={{ marginLeft: 20 }}
+                              style={{
+                                fontFamily: "MierA-Book",
+                                paddingTop: 14,
+                                paddingLeft: 42,
+                                paddingRight: 42,
+                              }}
                             >
-                              Resume
+                              View Resume
                             </Button>
                           </div>
                         </Fade>
-                        <Modal
-                          open={this.state.showContactModal}
-                          toggle={this.toggleContactModal}
-                        >
-                          <ModalBody>
-                            <form>
-                              <div className="contact-form-container">
-                                <div class="lds-ellipsis-container">
-                                  {this.state.formloader && (
-                                    <div class="lds-ellipsis">
-                                      <div />
-                                      <div />
-                                      <div />
-                                      <div />
-                                    </div>
-                                  )}
-                                  {this.state.formSuccess && "Sent! 🎉"}
-                                  {this.state.formError &&
-                                    "Sorry, Try Again 🙁"}
-                                  {!this.state.formloader &&
-                                    !this.state.formSuccess &&
-                                    !this.state.formError &&
-                                    "👋 Hey There!"}
-                                </div>
-                                <textarea
-                                  id="contact-body"
-                                  className="contact-body"
-                                  placeholder={"Your message..."}
-                                  onChange={() => this.validate("contact-body")}
-                                />
-                                <div className="contact-form-sub-container">
-                                  <input
-                                    id="contact-name"
-                                    className="contact-name"
-                                    placeholder="How can I get back to you?"
-                                    onChange={() =>
-                                      this.validate("contact-name")
-                                    }
-                                  />
-                                  <button
-                                    className="contact-submit"
-                                    onClick={this.submitForm}
-                                    type="button"
-                                  >
-                                    Send
-                                  </button>
-                                </div>
-                              </div>
-                            </form>
-                          </ModalBody>
-                        </Modal>
                       </Col>
                       <Col
-                        xs={{ size: 12, order: 2 }}
-                        sm={{ size: 12, order: 2 }}
-                        md={{ size: 1, order: 2 }}
-                        lg={{ size: 1, order: 2 }}
-                        xl={{ size: 1, order: 2 }}
-                        style={{ height: 50 }}
-                      />
-                      <Col
-                        xs={{ size: 6, order: 1, offset: 1 }}
-                        sm={{ size: 5, order: 1, offset: 1 }}
-                        md={{ size: 4, order: 2, offset: 0 }}
-                        lg={{ size: 3, order: 2, offset: 0 }}
-                        xl={{ size: 3, order: 2, offset: 0 }}
+                        xs={{ size: 10, offset: 1 }}
+                        sm={{ size: 10, offset: 1 }}
+                        md={{ size: 6, offset: 0 }}
+                        lg={{ size: 5, offset: 0 }}
+                        xl={{ size: 4, offset: 0 }}
                       >
-                        <Fade duration={2000}>
-                          <div>
-                            <img
-                              src={hani}
-                              alt="Hani Mohammed"
-                              className="avatar"
-                            />
-                          </div>
-                        </Fade>
+                        <div
+                          style={{
+                            color: "#8D8D8D",
+                            fontFamily: "MierA-Book",
+                            maxWidth: 340,
+                          }}
+                        >
+                          <Fade
+                            top
+                            distance="20px"
+                            delay={1500}
+                            duration={1000}
+                          >
+                            <p>
+                              Hey there! I love solving problems, mostly using
+                              computers. Some call it programming.
+                            </p>
+                          </Fade>
+                          <Fade
+                            top
+                            distance="20px"
+                            delay={1750}
+                            duration={1000}
+                          >
+                            <p>
+                              Giving back to the community is something I firmly
+                              believe in. I contribute to open-source software
+                              as much as I can.
+                            </p>
+                          </Fade>
+                          <Fade
+                            top
+                            distance="20px"
+                            delay={2000}
+                            duration={1000}
+                          >
+                            <p>
+                              I’m also a big fan of designing - both algorithms
+                              and interfaces. To create applications that leave
+                              an impression, I consider them both essential.
+                            </p>
+                          </Fade>
+                          <Fade
+                            top
+                            distance="20px"
+                            delay={2250}
+                            duration={1000}
+                          >
+                            <p>
+                              I don’t just build products; I try to make them as
+                              elegant and intuitive as possible.
+                            </p>
+                          </Fade>
+                        </div>
                       </Col>
                     </Row>
                   </Container>
@@ -398,9 +389,8 @@ export default class Home extends Component {
                     <center>
                       <h3
                         style={{
-                          fontFamily: "MuseoSans-700",
+                          fontFamily: "Cambon-Light",
                           color: "#AAA",
-                          textTransform: "uppercase",
                           lineHeight: 1.2,
                         }}
                       >
@@ -448,8 +438,8 @@ export default class Home extends Component {
                           target="_blank"
                           href={item.link}
                           style={{
-                            color: "#FBFBFB",
-                            fontFamily: "MuseoSans-700",
+                            color: item.light ? "4A4A4A" : "#FBFBFB",
+                            fontFamily: "MierA-DemiBold",
                           }}
                         >
                           {item.title}
@@ -459,8 +449,8 @@ export default class Home extends Component {
                         style={{
                           width: "100%",
                           textAlign: "left",
-                          color: "#FBFBFB",
-                          fontFamily: "MuseoSans-500",
+                          color: item.light ? "4A4A4A" : "#FBFBFB",
+                          fontFamily: "MierA-Regular",
                           fontSize: "0.8em",
                         }}
                       >
@@ -482,13 +472,14 @@ export default class Home extends Component {
                               marginTop: 2,
                               marginRight: 10,
                             }}
+                            className="dark-svg"
                           >
                             <a
                               href={item.dribbleLink}
                               target="_blank"
                               className="custom-link-anim"
                             >
-                              <img src={Dribble} />
+                              <img src={item.light ? DribbleDark : Dribble} />
                             </a>
                           </div>
                         )}
@@ -498,9 +489,15 @@ export default class Home extends Component {
                             pill
                             href={item.link}
                             target="_blank"
-                            theme="light"
+                            theme={item.light ? "secondary" : "light"}
                             size="sm"
-                            className="custom-light-but"
+                            className={!item.light && "custom-light-but"}
+                            style={{
+                              fontFamily: "MierA-Book",
+                              paddingTop: 7,
+                              paddingLeft: 12,
+                              paddingRight: 12,
+                            }}
                           >
                             Visit site
                           </Button>
@@ -554,13 +551,12 @@ export default class Home extends Component {
                     <center>
                       <h3
                         style={{
-                          fontFamily: "MuseoSans-700",
+                          fontFamily: "Cambon-Light",
                           color: "#4A4A4A",
-                          textTransform: "uppercase",
                           lineHeight: 1.2,
                         }}
                       >
-                        Projects
+                        Open Source
                       </h3>
                       <div
                         style={{
@@ -609,7 +605,7 @@ export default class Home extends Component {
                             target="_blank"
                             className="edu-card-header link-dark"
                             style={{
-                              fontFamily: "MuseoSans-700",
+                              fontFamily: "MierA-DemiBold",
                               fontSize: "1.2em",
                             }}
                           >
@@ -622,6 +618,7 @@ export default class Home extends Component {
                             maxWidth: 290,
                             fontSize: "0.8em",
                             marginBottom: 16,
+                            fontFamily: "MierA-Book",
                           }}
                         >
                           Exposes AudioKit for iOS to React Native
@@ -633,7 +630,13 @@ export default class Home extends Component {
                           target="_blank"
                           theme="dark"
                           size="sm"
-                          style={{ marginLeft: -4 }}
+                          style={{
+                            marginLeft: -4,
+                            fontFamily: "MierA-Book",
+                            paddingTop: 7,
+                            paddingLeft: 12,
+                            paddingRight: 12,
+                          }}
                         >
                           View on Github
                         </Button>
@@ -677,7 +680,7 @@ export default class Home extends Component {
                             target="_blank"
                             className="edu-card-header link-dark"
                             style={{
-                              fontFamily: "MuseoSans-700",
+                              fontFamily: "MierA-DemiBold",
                               fontSize: "1.2em",
                             }}
                           >
@@ -690,6 +693,7 @@ export default class Home extends Component {
                             maxWidth: 290,
                             fontSize: "0.8em",
                             marginBottom: 16,
+                            fontFamily: "MierA-Book",
                           }}
                         >
                           A Github Action to check if pull request titles
@@ -702,7 +706,13 @@ export default class Home extends Component {
                           target="_blank"
                           theme="dark"
                           size="sm"
-                          style={{ marginLeft: -4 }}
+                          style={{
+                            marginLeft: -4,
+                            fontFamily: "MierA-Book",
+                            paddingTop: 7,
+                            paddingLeft: 12,
+                            paddingRight: 12,
+                          }}
                         >
                           View on Github
                         </Button>
@@ -713,26 +723,33 @@ export default class Home extends Component {
                 <Row>
                   <Col>
                     <center>
-                      <p
-                        style={{
-                          fontFamily: "MuseoSans-100",
-                          textTransform: "uppercase",
-                          fontSize: 22,
-                          marginTop: 10,
-                          marginBottom: 10,
-                        }}
-                      >
-                        Contributions
-                      </p>
                       <Fade top cascade>
-                        <div>
+                        <div style={{ fontFamily: "MierA-Regular" }}>
+                          <div style={{ marginBottom: 6 }}>
+                            <a
+                              href="https://github.com/ljharb/repo-report"
+                              target="_blank"
+                              className="link-dark"
+                            >
+                              ljharb/repo-report
+                            </a>
+                          </div>
+                          <div style={{ marginBottom: 6 }}>
+                            <a
+                              href="https://github.com/thehanimo/ocr-bot"
+                              target="_blank"
+                              className="link-dark"
+                            >
+                              thehanimo/ocr-bot
+                            </a>
+                          </div>
                           <div style={{ marginBottom: 6 }}>
                             <a
                               href="https://github.com/cryptoadvance/specter-desktop"
                               target="_blank"
                               className="link-dark"
                             >
-                              specter-desktop
+                              cryptoadvance/specter-desktop
                             </a>
                           </div>
                           <div style={{ marginBottom: 6 }}>
@@ -741,7 +758,7 @@ export default class Home extends Component {
                               target="_blank"
                               className="link-dark"
                             >
-                              react-native-apple-authentication
+                              SystangoTechnologies/react-native-apple-authentication
                             </a>
                           </div>
                           <div style={{ marginBottom: 6 }}>
@@ -794,9 +811,8 @@ export default class Home extends Component {
                     <center>
                       <h3
                         style={{
-                          fontFamily: "MuseoSans-700",
+                          fontFamily: "Cambon-Light",
                           color: "#4A4A4A",
-                          textTransform: "uppercase",
                           lineHeight: 1.2,
                         }}
                       >
@@ -825,17 +841,18 @@ export default class Home extends Component {
                             style={{
                               paddingLeft: 16,
                               paddingRight: 16,
-                              fontFamily: "MuseoSans-300",
+                              fontFamily: "MierA-Regular",
                             }}
                           >
-                            Mohammed, Hani, Venkat Himavanth Reddy, and Subu
-                            Kandaswamy.
-                            <span style={{ fontFamily: "MuseoSans-700" }}>
+                            H. Mohammed, V. H. Reddy and S. Kandaswamy,
+                            <span style={{ fontFamily: "MierA-DemiBold" }}>
+                              {" "}
                               "A Decentralized Strategy for Cooperative Driving
-                              among Autonomous Cars at Lane Closures."
-                            </span>{" "}
+                              among Autonomous Cars at Lane Closures,"{" "}
+                            </span>
                             2020 IEEE 32nd International Conference on Tools
-                            with Artificial Intelligence (ICTAI). IEEE, 2020.
+                            with Artificial Intelligence (ICTAI), 2020, pp.
+                            905-910, doi: 10.1109/ICTAI50040.2020.00141.
                           </li>
                         </a>
                       </div>
@@ -856,9 +873,8 @@ export default class Home extends Component {
                     <center>
                       <h3
                         style={{
-                          fontFamily: "MuseoSans-700",
+                          fontFamily: "Cambon-Light",
                           color: "#4A4A4A",
-                          textTransform: "uppercase",
                           lineHeight: 1.2,
                         }}
                       >
@@ -921,6 +937,7 @@ export default class Home extends Component {
               style={{
                 backgroundColor: "#F3F3F3",
                 borderTop: "1px solid #DADADA",
+                fontFamily: "MierA-Regular",
               }}
             >
               <Container>
@@ -948,8 +965,9 @@ export default class Home extends Component {
                     md={{ size: 6, offset: 0 }}
                     lg={{ size: 5, offset: 0 }}
                     xl={{ size: 4, offset: 3 }}
+                    style={{ textAlign: windowWidth > 767 && "right" }}
                   >
-                    Copyright © 2021 Hani Mohammed. All rights reserved.
+                    Copyright © 2022 Hani Mohammed
                   </Col>
                 </Row>
               </Container>
