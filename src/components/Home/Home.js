@@ -21,6 +21,7 @@ import FutureSchoolApp from "../../assets/img/FutureSchool-app.png";
 import RNAudioKit from "../../assets/img/RNAudioKit.png";
 import PRCheck from "../../assets/img/PRCheck.png";
 
+import NYU from "../../assets/img/NYU.png";
 import IIITS from "../../assets/img/IIITS.png";
 
 import LinkedIn from "../../assets/img/linkedin.svg";
@@ -894,23 +895,82 @@ export default class Home extends Component {
                   style={{
                     justifyContent: "center",
                     alignItems: "center",
+                   
                   }}
                 >
                   <Fade bottom distance="30px" delay={200}>
                     <div
                       style={{
                         display: "flex",
-                        justifyContent: "center",
+                        justifyContent:"space-between",
                         alignItems: "center",
                         marginLeft: 20,
                         marginRight: 20,
+                        width: windowWidth < 470 && 300,
+                        marginBottom: 24
                       }}
                     >
-                      <img
-                        src={IIITS}
-                        style={{ width: "25%", float: "left", maxWidth: 133 }}
-                      />
-                      <div style={{ marginLeft: 12 }}>
+                      <div style={{ padding:  windowWidth < 470? 8: 18, width: "25%", maxWidth: 133, display:"flex", justifyContent:"center", alignItems:"center" }}>
+                        <a
+                          href="https://nyu.edu"
+                          target="_blank"
+                        >
+                          <img
+                            src={NYU}
+                            style={{width:"100%"}}
+                          />
+                        </a>
+                      </div>
+                      <div style={{ marginLeft: 12, width: windowWidth < 470? 200: 360 }}>
+                        <div>
+                          <a
+                            href="https://nyu.edu"
+                            target="_blank"
+                            className="edu-card-header link-dark"
+                            style={{ fontSize: "1.2em" }}
+                          >
+                            New York University
+                          </a>
+                        </div>
+                        <div className="edu-card-subheader">
+                          M.S. in Computer Science
+                          <br />
+                          Batch of 2024
+                        </div>
+                      </div>
+                    </div>
+                  </Fade>
+                </Row>
+
+                <Row
+                  style={{
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
+                >
+                  <Fade bottom distance="30px" delay={400}>
+                    <div
+                      style={{
+                        display: "flex",
+                        justifyContent:"space-between",
+                        alignItems: "center",
+                        marginLeft: 20,
+                        marginRight: 20,
+                        width: windowWidth < 470 && 300
+                      }}
+                    >
+                      <div style={{ width: "25%", maxWidth: 133, display:"flex", justifyContent:"center", alignItems:"center" }}>
+                        <a
+                          href="https://www.iiits.ac.in"
+                          target="_blank"
+                        >
+                          <img
+                            src={IIITS}
+                            style={{width:"100%"}}
+                          />
+                        </a>
+                      </div>
+                      <div style={{ marginLeft: 12, width: windowWidth < 470? 200: 360 }}>
                         <div>
                           <a
                             href="https://www.iiits.ac.in"
