@@ -1,23 +1,24 @@
 {
   "files": {
     "main.css": "/static/css/main.476a6c71.chunk.css",
-    "main.js": "/static/js/main.c5067e04.chunk.js",
-    "main.js.map": "/static/js/main.c5067e04.chunk.js.map",
+    "main.js": "/static/js/main.f7a8e414.chunk.js",
+    "main.js.map": "/static/js/main.f7a8e414.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.e4367730.js",
     "runtime-main.js.map": "/static/js/runtime-main.e4367730.js.map",
     "static/css/2.f7e6c76a.chunk.css": "/static/css/2.f7e6c76a.chunk.css",
-    "static/js/2.171bda8d.chunk.js": "/static/js/2.171bda8d.chunk.js",
-    "static/js/2.171bda8d.chunk.js.map": "/static/js/2.171bda8d.chunk.js.map",
+    "static/js/2.e06fea07.chunk.js": "/static/js/2.e06fea07.chunk.js",
+    "static/js/2.e06fea07.chunk.js.map": "/static/js/2.e06fea07.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.c24bf65f3b4c6400f9f3318246ddf9cc.js": "/precache-manifest.c24bf65f3b4c6400f9f3318246ddf9cc.js",
+    "precache-manifest.f0e625dbcc19741d28cc74e463b17d4d.js": "/precache-manifest.f0e625dbcc19741d28cc74e463b17d4d.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.f7e6c76a.chunk.css.map": "/static/css/2.f7e6c76a.chunk.css.map",
     "static/css/main.476a6c71.chunk.css.map": "/static/css/main.476a6c71.chunk.css.map",
-    "static/js/2.171bda8d.chunk.js.LICENSE.txt": "/static/js/2.171bda8d.chunk.js.LICENSE.txt",
+    "static/js/2.e06fea07.chunk.js.LICENSE.txt": "/static/js/2.e06fea07.chunk.js.LICENSE.txt",
     "static/media/Antzknow-app.png": "/static/media/Antzknow-app.1072e76e.png",
     "static/media/index.css": "/static/media/MierA-Regular.5e3c2e99.woff2",
     "static/media/FutureSchool-app.png": "/static/media/FutureSchool-app.ec32918c.png",
     "static/media/IIITS.png": "/static/media/IIITS.faea592d.png",
+    "static/media/NYU.png": "/static/media/NYU.f1c6eb37.png",
     "static/media/Nodestory-app.png": "/static/media/Nodestory-app.8b4b21bb.png",
     "static/media/PRCheck.png": "/static/media/PRCheck.ca6b4849.png",
     "static/media/PushApp.png": "/static/media/PushApp.eddd31fa.png",
@@ -27,7 +28,7 @@
     "static/media/dribble-dark.svg": "/static/media/dribble-dark.59188f98.svg",
     "static/media/dribble.svg": "/static/media/dribble.29a152db.svg",
     "static/media/github.svg": "/static/media/github.47e18e36.svg",
-    "static/media/hani.jpg": "/static/media/hani.26d7cb3d.jpg",
+    "static/media/hani.jpg": "/static/media/hani.01c9f5f8.jpg",
     "static/media/instagram.svg": "/static/media/instagram.b150fca8.svg",
     "static/media/linkedin.svg": "/static/media/linkedin.f35867f4.svg",
     "static/media/skillbee.png": "/static/media/skillbee.365c8088.png",
@@ -36,8 +37,8 @@
   "entrypoints": [
     "static/js/runtime-main.e4367730.js",
     "static/css/2.f7e6c76a.chunk.css",
-    "static/js/2.171bda8d.chunk.js",
+    "static/js/2.e06fea07.chunk.js",
     "static/css/main.476a6c71.chunk.css",
-    "static/js/main.c5067e04.chunk.js"
+    "static/js/main.f7a8e414.chunk.js"
   ]
 }
