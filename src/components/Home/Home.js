@@ -8,7 +8,6 @@ import Pulse from "react-reveal/Pulse";
 import { send, init } from "emailjs-com";
 
 import "./styles/home.css";
-import hani from "../../assets/img/hani.jpg";
 
 import NodestoryApp from "../../assets/img/Nodestory-app.png";
 import SkillbeeApp from "../../assets/img/skillbee.png";
@@ -215,12 +214,6 @@ export default class Home extends Component {
                         fontFamily: "MierA-DemiBold",
                       }}
                     >
-                      <img
-                        src={hani}
-                        alt="Hani Mohammed"
-                        className="avatar"
-                        style={{ height: 26, width: 26, marginRight: 8 }}
-                      />
                       thehanimo
                     </div>
                     <Row style={{ alignItems: "center", marginTop: "100px" }}>
