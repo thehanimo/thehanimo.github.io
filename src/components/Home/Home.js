@@ -5,7 +5,6 @@ import Fade from "react-reveal/Fade";
 import Flip from "react-reveal/Flip";
 import Zoom from "react-reveal/Zoom";
 import Pulse from "react-reveal/Pulse";
-import { send, init } from "emailjs-com";
 
 import "./styles/home.css";
 
@@ -44,7 +43,6 @@ export default class Home extends Component {
   componentDidMount = () => {
     this.resize();
     window.addEventListener("resize", this.resize);
-    init("user_fPYfAmrOM5e7hArFO7aDq");
   };
 
   componentWillUnmount = () => {
@@ -64,26 +62,6 @@ export default class Home extends Component {
       });
     } else {
       this.setState({ showContactModal: !this.state.showContactModal });
-    }
-  };
-
-  submitForm = () => {
-    if (this.state.formloader || this.state.formSuccess) return;
-    let body = this.validate("contact-body");
-    let name = this.validate("contact-name");
-    if (body && name) {
-      this.setState({ formloader: true, formSuccess: false, formError: false });
-      const REACT_APP_EMAILJS_RECEIVER = "thehanimo@gmail.com";
-      const REACT_APP_EMAILJS_TEMPLATEID = "thehanimo@gmail.com";
-      send("mailgun", "template_VgF2K5ij", {
-        name,
-        body,
-      })
-        .then((res) => {
-          this.setState({ formloader: false, formSuccess: true });
-        })
-        // Handle errors here however you like, or use a React error boundary
-        .catch((err) => this.setState({ formloader: false, formError: true }));
     }
   };
 
@@ -271,14 +249,14 @@ export default class Home extends Component {
                               <img src={Github} />
                             </a>
                           </Zoom>
-                          <Zoom delay={950}>
+                          {/* <Zoom delay={950}>
                             <a
                               href="https://twitter.com/thehanimo"
                               target="_blank"
                             >
                               <img src={Twitter} style={{ height: 18 }} />
                             </a>
-                          </Zoom>
+                          </Zoom> */}
                         </div>
                         <Fade
                           bottom
@@ -928,7 +906,7 @@ export default class Home extends Component {
                         <div className="edu-card-subheader">
                           M.S. in Computer Science
                           <br />
-                          Batch of 2024
+                          Class of 2024
                         </div>
                       </div>
                     </div>
@@ -977,7 +955,7 @@ export default class Home extends Component {
                         <div className="edu-card-subheader">
                           B.Tech (Hons), Computer Science and Engineering
                           <br />
-                          Batch of 2021
+                          Class of 2021
                         </div>
                       </div>
                     </div>
@@ -1020,7 +998,7 @@ export default class Home extends Component {
                     xl={{ size: 4, offset: 3 }}
                     style={{ textAlign: windowWidth > 767 && "right" }}
                   >
-                    Copyright © 2022 Hani Mohammed
+                    Copyright © 2023 Hani Mohammed
                   </Col>
                 </Row>
               </Container>
